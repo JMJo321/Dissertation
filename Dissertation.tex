@@ -1,0 +1,101 @@
+% ----------------------------------------
+% Preambles
+% ----------------------------------------
+% ------- Load preambles -------
+% % 1. To set document layout
+\input{00_Preambles/Preamble_Dissertation_Layout}
+% % 2. To load packages required
+\input{00_Preambles/Preamble_Dissertation_Packages}
+% % 3. To define new commands
+\input{00_Preambles/Preamble_Dissertation_New-Commands}
+
+
+% ------- To add basic document information -------
+% % 2. TITLE, AUTHOR, AND DATE
+% % 2.1. Title
+%\title{}
+
+% % 2.2. Author
+\author{Jinmahn Jo}
+
+% % 2.3. Date
+%\date{October 23, 2020}
+
+
+% ----------------------------------------
+% Main Document 
+% ----------------------------------------
+\begin{document}
+
+% ------- Front-Matter -------
+%\frontmatter
+\tableofcontents
+\clearpage
+
+\listoftables
+\clearpage
+
+\listoffigures
+\clearpage
+
+
+% ------- Main Matter -------
+% % 1. Chapter 1
+%\chapter{Behavioral Response in Household's Electricity Consumption}
+%\label{Chapter:Behavioral-Response}
+%\clearpage
+
+% TODO Modify document layout in order to add chapter names
+
+\section{Introduction}
+\label{Section:Introduction}
+\input{02_Chapter-1/01_Introduction/Introduction}
+
+\section{Theoretical Predictions}
+\label{Section:Theoretical-Predictions}
+\input{02_Chapter-1/02_Theoretical-Predictions/Theoretical-Predictions}
+
+\section{Research Design and Data}
+\label{Section:Research-Design-and-Data}
+\input{02_Chapter-1/03_Research-Design-and-Data/Research-Design-and-Data}
+
+\section{Empirical Analysis and Results}
+\label{Section:Empirical-Analysis-and-Results}
+\input{02_Chapter-1/04_Empirical-Analysis-and-Results/Empirical-Analysis-and-Results}
+
+\section{Welfare Analysis}
+\label{Section:Welfare-Analysis}
+\input{02_Chapter-1/05_Welfare-Analysis/Welfare-Analysis}
+
+\section{Conclusion}
+\label{Section:Conclusion}
+\input{02_Chapter-1/06_Conclusion/Conclusion}
+\clearpage
+
+
+\appendix
+%\chapter{Appendix}
+\label{Appendix}
+\clearpage
+
+
+% % 2. Chapter 2
+
+
+% % 3. Chapter 3
+
+\section{A Drilling Problem with Heterogenous Quality in Geological Features}
+\label{Section:Drilling-Problem-with-Heterogenous-Quality}
+\input{04_Chapter-3/00_A-Drilling-Problem-with-Heterogenous-Quality-in-Geological-Features/00_A-Drilling-Problem-with-Heterogenous-Quality-in-Geological-Features}
+\clearpage
+
+
+% ------- Back Matter -------
+%\backmatter
+
+% % To add a bibliography
+\bibliographystyle{05_Bibliography/aea}
+\bibliography{05_Bibliography/Bibliography}
+
+\end{document}
+
