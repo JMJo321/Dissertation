@@ -1,0 +1,13 @@
+Estimating peak-rate-period ATEs relative to the control group allows us to know whether or not the law of demand is satisfied between the responsiveness of Irish households and the magnitudes of price changes in TOU electricity pricing.\footnote{In this paper, the effects of four different information stimuli on household electricity consumption are not of interest. \cite{The-Effect-of-Information-on-TOU-Electricity-Use:An-Irish-Residential-Study} studied the effects in detail using the same datasets.} To do so, I run the following regression for each of the four tariff groups:
+\begin{equation}
+\begin{split}
+    \textit{kWh}_{ith} \ 
+    & = \ \beta_{p} \mathbb{1}\big[ \text{Treatment \& Post} \big]_{it} \ + \ \alpha_{iw} \ + \ \gamma_{dw} \ + \ \delta_{m} \ + \ \epsilon_{ith}
+\end{split}
+\label{Eq:Model-Specification_Hourly-Average-Treatment-Effects}
+\end{equation}
+Excepting the dependent variable and the parameter of interest, the econometric model above is the same as (\ref{Eq:Model-Specification_Half-Hourly-Average-Treatment-Effects}). Specifically, the response variable $kWh_{ith}$ means the electricity consumption by household $i$ on the day $t$ during the hour of the day $h$, and the point estimates of $\beta_{p}$ indicate the ATE for each of three rate periods $p$. Table \ref{Table:Average-Treatment-Effects-in-the-Peak-Rate-Period} summarizes the regression results. 
+
+The results demonstrated in Table \ref{Table:Average-Treatment-Effects-in-the-Peak-Rate-Period} indicate that the measured ATEs generally follow the law of demand: in general, the reduction in household demand for electricity during the peak rate period grows with the size of the price jump. Importantly, the results imply that household electricity savings from temperature-control use or ones from non-temperature-control uses depend on the amount of the tariff change in the peak rate period. Motivated by this implication, the relative responsiveness of the two distinct drivers of energy savings to the time-varying prices introduced is quantified below.
+
+\input{03_Chapter-2/00B_Tables/Average-Treatment-Effects-in-the-Peak-Rate-Period}
