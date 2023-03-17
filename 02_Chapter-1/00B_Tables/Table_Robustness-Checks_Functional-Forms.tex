@@ -1,0 +1,69 @@
+\afterpage{
+    \begin{table}[t!]
+        \centering
+        \caption{Robustness Checks: For Different Functional Forms}
+        \label{Table:Robustness-Checks_Functional-Forms}
+        \vspace{0.3cm}
+        \footnotesize
+        \begin{adjustbox}{scale = 0.95}
+            \begin{threeparttable}
+                \begin{tabular}{@{\extracolsep{15pt}}lcccccc}
+                    \\[-5.5ex]
+                    \hline \hline
+                    \\[-3.0ex]
+                     & \multicolumn{6}{c}{Dependent Variable} \\
+                    \\[-3.0ex]
+                    \cline{2-7}
+                    \\[-3.0ex]
+                     & \multicolumn{6}{c}{Average Daily Electricity Consumption  (kWh/Day)} \\
+                    \\[-3.0ex]
+                     & (1) & (2) & (3) & (4) & (5) & (6) \\
+                    \\[-3.0ex]
+                    \hline
+                    \\[-2.0ex]
+                    $\mathbb{1}$[Treatment] & $-$0.024$^{**}$ & $-$0.021$^{*}$ & $-$0.021$^{*}$ & 0.012 & 0.005 & $-$0.008 \\ 
+                     & (0.011) & (0.011) & (0.011) & (0.015) & (0.013) & (0.022) \\ 
+                     & & & & & & \\ 
+                    NC0 & 0.134$^{***}$ & 0.136$^{***}$ & 0.134$^{***}$ & 0.132$^{***}$ & 0.131$^{***}$ & 0.133$^{***}$ \\ 
+                     & (0.006) & (0.006) & (0.006) & (0.006) & (0.006) & (0.009) \\ 
+                     & & & & & & \\ 
+                    $\mathbb{1}$[Treatment] $\times$ NC0 &  & $-$0.004$^{**}$ &  & $-$0.005 &  & 0.005 \\ 
+                     &  & (0.002) &  & (0.004) &  & (0.009) \\ 
+                     & & & & & & \\ 
+                    NC0$^{2}$ &  &  & $-$0.0001$^{**}$ & $-$0.0002$^{**}$ & $-$0.0001$^{**}$ & $-$0.0001 \\ 
+                     &  &  & (0.00004) & (0.0001) & (0.00004) & (0.001) \\ 
+                     & & & & & & \\ 
+                    $\mathbb{1}$[Treatment] $\times$ NC0$^{2}$ &  &  &  & 0.001$^{***}$ &  & $-$0.001 \\ 
+                     &  &  &  & (0.0002) &  & (0.001) \\ 
+                     & & & & & & \\ 
+                    NC0$^{3}$ &  &  &  &  & 0.00001$^{***}$ & 0.00000 \\ 
+                     &  &  &  &  & (0.00000) & (0.00002) \\ 
+                     & & & & & & \\ 
+                    $\mathbb{1}$[Treatment] $\times$ NC0$^{3}$ &  &  &  &  &  & 0.00004 \\ 
+                     &  &  &  &  &  & (0.00003) \\ 
+                     & & & & & & \\ 
+                    Average Daily CDDs & 1.206$^{***}$ & 1.206$^{***}$ & 1.206$^{***}$ & 1.206$^{***}$ & 1.206$^{***}$ & 1.206$^{***}$ \\ 
+                     & (0.055) & (0.055) & (0.055) & (0.055) & (0.055) & (0.055) \\ 
+                     & & & & & & \\ 
+                    Average Daily HDDs & 0.492$^{***}$ & 0.492$^{***}$ & 0.492$^{***}$ & 0.492$^{***}$ & 0.492$^{***}$ & 0.492$^{***}$ \\ 
+                     & (0.051) & (0.051) & (0.051) & (0.051) & (0.051) & (0.051) \\ 
+                     & & & & & & \\
+                    \hline
+                    \\[-2.0ex]
+                    Bandwidth & 20\% & 20\% & 20\% & 20\% & 20\% & 20\% \\ 
+                    FEs: Account-by-Premise IDs & Yes & Yes & Yes & Yes & Yes & Yes \\ 
+                    FEs: Billing Year-by-Month & Yes & Yes & Yes & Yes & Yes & Yes \\ 
+                    Observations & 5,010,089 & 5,010,089 & 5,010,089 & 5,010,089 & 5,010,089 & 5,010,089 \\ 
+                    Adjusted R$^{2}$ & 0.582 & 0.582 & 0.582 & 0.582 & 0.582 & 0.582 \\ 
+                    \\[-2.0ex]
+                    \hline \hline
+                    \\[-4.5ex]
+                \end{tabular}
+                \begin{tablenotes}[flushleft]
+                    \footnotesize
+                    \item \textit{Note}: * $p < 0.1$, ** $p < 0.05$, and *** $p < 0.01$.
+                \end{tablenotes}
+            \end{threeparttable}
+        \end{adjustbox}
+    \end{table}
+}
