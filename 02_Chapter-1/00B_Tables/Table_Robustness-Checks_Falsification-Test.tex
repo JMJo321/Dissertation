@@ -1,0 +1,46 @@
+\afterpage{
+    \begin{table}[t!]
+        \centering
+        \caption{Robustness Checks: Falsification Test}
+        \label{Table:Robustness-Checks_Falsification-Test}
+        \vspace{0.3cm}
+        \small
+        \begin{adjustbox}{scale = 0.8}
+            \begin{threeparttable}
+                \begin{tabular}{@{\extracolsep{-2.0pt}}lcccccccccc}
+                    \\[-5.5ex]
+                    \hline \hline
+                    \\[-3.0ex]
+                    & \multicolumn{10}{c}{Dependent Variable} \\
+                    \\[-3.0ex]
+                    \cline{2-11}
+                    \\[-3.0ex]
+                    & \multicolumn{10}{c}{Average Daily Electricity Consumption  (kWh/Day)} \\
+                    \\[-3.0ex]
+                    & (1) & (2) & (3) & (4) & (5) & (6) & (7) & (8) & (9) & (10) \\
+                    \\[-3.0ex]
+                    \hline
+                    \\[-2.0ex]
+                    $\mathbb{1}$[Treatment] & 0.004 & 0.015 & 0.002 & 0.009 & $-$0.001 & 0.020 & $-$0.011 & 0.001 & 0.012 & 0.013 \\
+                    & (0.018) & (0.011) & (0.010) & (0.018) & (0.013) & (0.027) & (0.019) & (0.030) & (0.020) & (0.016) \\
+                    & & & & & & & & & & \\
+                    \hline
+                    \\[-2.0ex]
+                    False Cutoff Point & -15\% & -15\% & -15\% & -10\% & -10\% & 10\% & 10\% & 15\% & 15\% & 15\% \\
+                    Bandwidth & 5\% & 10\% & 15\% & 5\% & 10\% & 5\% & 10\% & 5\% & 10\% & 15\% \\
+                    FEs: Household & Yes & Yes & Yes & Yes & Yes & Yes & Yes & Yes & Yes & Yes \\
+                    FEs: Billing-Year-by-Billing-Month & Yes & Yes & Yes & Yes & Yes & Yes & Yes & Yes & Yes & Yes \\
+                    Observations & 1,285,859 & 2,574,684 & 3,832,151 & 1,265,302 & 2,531,811 & 1,084,739 & 2,154,636 & 1,021,525 & 2,026,847 & 3,041,660 \\
+                    Adjusted R$^{2}$ & 0.563 & 0.560 & 0.567 & 0.568 & 0.564 & 0.576 & 0.570 & 0.575 & 0.572 & 0.575 \\
+                    \\[-2.0ex]
+                    \hline \hline
+                    \\[-4.5ex]
+                \end{tabular}
+                \begin{tablenotes}[flushleft]
+                    \footnotesize
+                    \item \textit{Note}: This table shows the results from the falsification test that examines treatment effects at a set of false cutoff points. The specification (10) in Table \ref{Table:RD-Results} is exploited, but only the estimates for the treatment effect are presented. * $p < 0.1$, ** $p < 0.05$, and *** $p < 0.01$.
+                \end{tablenotes}
+            \end{threeparttable}
+        \end{adjustbox}
+    \end{table}
+}
