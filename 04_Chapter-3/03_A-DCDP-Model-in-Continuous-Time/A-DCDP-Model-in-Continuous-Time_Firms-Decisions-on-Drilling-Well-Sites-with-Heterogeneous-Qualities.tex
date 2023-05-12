@@ -1,0 +1,28 @@
+In our formulation, a particular well site $i$ can be in state $k$ at some time $t$. This $k$ is an integer scalar index $k = 1, 2, \cdots, K$, by which every available state in a finite state space $\mathcal{X}$ is enumerated.\footnote{As implied, $\mathcal{X}$ is a discrete state space.} For simplicity, it is assumed that the firm can drill only one horizontal well in that well location $i$. 
+
+We utilize discretized oil prices. Because oil prices are one of the state variables in our formulation, we exploit the same index system. For example, $p_{k}$ denotes the oil price in state $k$. In our setting, oil prices can vary due to two distinct processes. One is a Markov jump process on $\mathcal{X}$. Parameters $\lambda_{k\ell}$ that indicate the rates at which particular state transitions from $k$ to $\ell \neq k$ occur govern this process. The firm's actions, following a Poisson arrival process with rate parameter $\lambda_{a}$, drive the other process. Specifically, when the firm chooses the action $a = 1$, which means drilling a well in site $i$, from the discrete choice set $\mathcal{A} = \{ 0, 1 \}$, $p_{\ell(i, a, k)}$ is the price in the resulting state $\ell(i, a, k)$.\footnote{This implicitly assumes that oil prices are determined endogenously. The firm's action does not impact oil prices when oil prices are exogenous.}\footnote{$a = 0$ is a costless continuation choice.}
+
+A vector $\boldsymbol{x}_{ik}$, representing a particular well site $i$ in state $k$ at each instant $t \in [0, \infty)$, has three elements:
+\begin{center}
+    $\boldsymbol{x}_{ik} \ = \ (g_{ik}^{L}, s_{ik}, p_{k}).$
+\end{center}
+The first element $g_{ik}^{L}$ characterizes a given well site $i$'s quality type, which falls in one from the quality set $\mathcal{Q} = \{ L(ow), H(igh) \}$. This binary indicator has the value of one when well location $i$ is a low-quality well. The second element $s_{ik} \in \{ 0, 1 \}$ indicates whether a well has been drilled in well site $i$. For a given well site $i$, $s_{ik} = 1$ means that the firm already drilled a horizontal well in this site. The last term shows the oil price in state $k$.
+
+The firm, which is forward-looking and discounts future payoffs at rate $\rho \in (0, \infty)$, receives two different types of payoffs. First, the firm receives flow payoff with respect to a particular well site $i$ being in state $k$. We formulate the flow payoff $f_{ik}$ as a function of the state variables:
+\input{04_Chapter-3/00C_Equations/Equation_Firms-Problem_Flow-Payoff.tex}
+Due to the term $1 - s_{ik}$ in the expression, well sites already drilled get no flow payoff. Moreover, the last term in the curly bracket indicates an additional payoff only for high-quality well locations.
+
+Regarding a given well site $i$ in state $k$, the firm also receives an instantaneous payoff when taking action $a \in \mathcal{A}$. This choice-dependent payoff consists of a choice-specific payoff $\psi_{iak}$ and a choice-specific payoff shock $\epsilon_{iak}$, which is observable only to the firm. We formulate the choice-specific payoff as follows:
+\input{04_Chapter-3/00C_Equations/Equation_Firms-Problem_Instantaneous-Payoff.tex}
+In this formulation, $\alpha^{H}$ is the normalized oil production from the site $i$ whose quality type is $H$.\footnote{We normalize the oil production from a low-quality well location to 1. Therefore, $\alpha^{H} > 1$ implicitly.} And $c$ stands for drilling costs. Clearly, the firm gets no instantaneous payoff when the site is already drilled or if deciding not to drill. 
+Furthermore, we assume that the $\epsilon_{iak}$'s are I.I.D. and follow $T1EV(0, \sigma)$. 
+
+In our continuous-time framework, the value function for a particular well site $i$ in state $k$ is given by
+\input{04_Chapter-3/00C_Equations/Equation_Firms-Problem_Value-Function.tex}
+For a given well site $i$, the value function $V_{ik}$ represents the present discounted value of all payoffs obtained from starting at state $k$ and behaving optimally in all subsequent periods. 
+
+If no exogenous change in oil prices exists, the value function can be simplified as follows:
+\input{04_Chapter-3/00C_Equations/Equation_Firms-Problem_Simplified-Value-Function.tex}
+Some algebraic manipulation for this simplified value function yields the following equation that drives the dynamics of the firm's optimal drilling decisions:
+\input{04_Chapter-3/00C_Equations/Equation_Firms-Problem_Euler-Equation.tex}
+In this equation, the left-hand side represents the payoff that the firm receives when deciding to stay in state $k$, whereas the right-hand side is the firm's payoff if it chooses to drill a horizontal well into well site $i$. Importantly, it is evident that the equation (\ref{Equation:Firms-Problem_Euler-Equation}) drawn from the firm's problem is equivalent to the necessary condition (\ref{Equation:Social-Planners-Problem_Meaning-of-Costate-Variable}) of the social planner's problem. In addition, the equivalence between them suggests a significant economic implication that the oil market clears. 

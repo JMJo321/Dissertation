@@ -1,0 +1,38 @@
+This section presents the basic elements and assumptions of our continuous-time Discrete Choice Dynamic Programming (DCDP) model that formulates fracking firms' drilling decisions on a particular well site as an optimal stopping problem. Following \cite{Hotelling-under-Pressure_AKS_2018}, we assume a continuum of infinitesimally small well sites in which horizontal wells will be drilled. Contrary to the AKS-style model, our DCDP model can rationalize the simultaneous drilling of horizontal wells with heterogeneous quality. Moreover, our theoretical framework yields predictions, being testable by utilizing detailed data on drilling and extraction in North Dakota, about how the frackers' drilling activity varies with oil prices. 
+
+The state of a given well site at the beginning of time $t$ is represented by using a well-site-level state variable $s_{t}$ as follows:
+\input{04_Chapter-3/00C_Equations/Equation_DCDP-Model_State-Variable.tex}
+
+For a given well site that has not been developed, the firm makes a choice at time $t$ between two alternatives $a_{t} \in \{ 0, 1 \}$, which is a well-site-level control variable:
+\input{04_Chapter-3/00C_Equations/Equation_DCDP-Model_Control-Variable.tex}
+Intuitively, the two alternatives are constrained. To be specific, the constraint depends on the value of $s_{t}$:
+\input{04_Chapter-3/00C_Equations/Equation_DCDP-Model_Constraints-of-Control-Variable.tex}
+
+The oil production from a horizontal well drilled at time $t$ is assumed to occur only during the very period:
+\input{04_Chapter-3/00C_Equations/Equation_DCDP-Model_Oil-Production.tex}
+where $\alpha$ is the amount of oil produced from a well. For simplicity, it is also assumed that $\alpha$ is a constant across well locations.
+
+The marginal drilling-associated costs at time $t$ are assumed to be uniform across well sites.\footnote{As in Section \ref{C3-SubSection:A-Limitation-of-AKS-style-Model}, we take the assumption of the negligible extraction costs.} We also assume linear marginal costs of drilling a horizontal well. That is, 
+\input{04_Chapter-3/00C_Equations/Equation_DCDP-Model_Cost.tex}
+
+The oil price at time $t$, denoted $p_{t}$, is another state variable in our model. Regarding oil prices, two different scenarios are possible in our model. If the oil production industry is small relative to the world oil market, then $p_{t}$ is the world price $\bar{p}$. In other words, $p_{t}$ is exogenous. In the endogenous-price scenario, the market clearing $p_{t}$ is determined from a linear inverse demand curve:
+\input{04_Chapter-3/00C_Equations/Equation_DCDP-Model_Oil-Prices.tex}
+where $Q_{t}$ is aggregate oil production, which will be described in detail later. 
+
+Let $R_{t}$ denote the remaining level of well sites at time $t$. Suppose its initial level is normalized to 1 (i.e., $R_{0} = 1$).
+
+For a given well location that has not been drilled before time $t$, the probability of drilling the well at time $t$ conditional on $s_{t}$ and $p_{t}$ can be defined as follows:
+\input{04_Chapter-3/00C_Equations/Equation_DCDP-Model_Definition-of-CCP.tex}
+
+Intuitively, aggregate drilling at time $t$ can be expressed with $R_{t}$ and $Pr_{t}$ as follows:
+\input{04_Chapter-3/00C_Equations/Equation_DCDP-Model_Aggregate-Drilling.tex}
+From this definition, the evolution path of the remaining well sites is governed by the following relationship:
+\input{04_Chapter-3/00C_Equations/Equation_DCDP-Model_Reserve.tex}
+In addition, due to the assumption that $\alpha$ is uniform across well sites, the aggregate oil production $Q_{t}$ is proportional to $D_{t}$:
+\input{04_Chapter-3/00C_Equations/Equation_DCDP-Model_Aggregate-Oil-Production.tex}
+
+The utility obtained from an individual well site can be represented by exploiting an additively separable utility function:
+\input{04_Chapter-3/00C_Equations/Equation_DCDP-Model_Utility-Function.tex}
+In the utility function, $\epsilon_{t}$ is idiosyncratic utility shocks at time $t$ that rely on the firm's choice at that time and are observable only to the firm. If the $\epsilon(a_{t})$'s follow the Type 1 Extreme Value (T1EV) distribution with the location parameter 0 and the scale parameter $\sigma$ and are I.I.D., then the expected value of $\epsilon(a_{t})$ conditional on the chosen alternative $a(t)$ is
+\input{04_Chapter-3/00C_Equations/Equation_DCDP-Model_Expected-Value-of-Epsilon.tex}
+Here, $\gamma$ and $CCP(a_{t})$ are Euler's constant and the probability of choosing $a_{t}$ conditional on states at time $t$, respectively. For example, when $a_{t} = 1$, the utility shock's expected value is $\sigma \left( \gamma \ - \ \ln (Pr_{t}) \right)$. 

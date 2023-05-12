@@ -1,0 +1,67 @@
+% ----------------------------------------
+% Preambles
+% ----------------------------------------
+% ------- Load preambles -------
+% % 1. To set document layout
+\input{00_Preambles/Preamble_Dissertation_Layout}
+% % 2. To load packages required
+\input{00_Preambles/Preamble_Dissertation_Packages}
+% % 3. To define new commands
+\input{00_Preambles/Preamble_Dissertation_New-Commands}
+
+
+% ------- To add basic document information -------
+% % 2. TITLE, AUTHOR, AND DATE
+% % 2.1. Title
+%\title{}
+
+% % 2.2. Author
+\author{Jinmahn Jo}
+
+% % 2.3. Date
+%\date{October 23, 2020}
+
+
+% ----------------------------------------
+% Main Document 
+% ----------------------------------------
+\begin{document}
+
+% ------- Front-Matter -------
+%\frontmatter
+\tableofcontents
+\clearpage
+
+\listoftables
+\clearpage
+
+\listoffigures
+\clearpage
+
+
+% ------- Main Matter -------
+% % 1. Chapter 3
+%\chapter{From Hotelling to DCDP Model: New Approach for Microeconomic Empirical Work in Oil and Gas Extraction}
+%\label{Chapter:From-Hotelling-to-DCDP-Model}
+%\clearpage
+\input{04_Chapter-3/Dissertation_Chapter-3.tex}
+\clearpage
+
+
+\appendix
+%\chapter{Appendix}
+\section{Appendixes}
+\label{Appendixes}
+\input{06_Appendixes/03_For-Chapter-3/Appendixes_For-Chapter-3.tex}
+\clearpage
+
+
+% ------- Back Matter -------
+%\backmatter
+
+% % To add a bibliography
+\bibliographystyle{05_Bibliography/aea}
+\bibliography{05_Bibliography/Bibliography}
+
+\end{document}
+

@@ -1,0 +1,19 @@
+\textit{\textbf{The Firm's (Expected) Payoff Maximization Problem}} ---
+The firm aims to maximize the total payoffs from drilling its well sites. Because the instantaneous payoff includes choice-dependent shocks $\epsilon_{iak}$, which follow the distribution of $TIEV(0, \sigma)$, the payoff the firm receives when drilling an individual well site $i$ is an expected value. So, the firm's problem is given by
+\input{04_Chapter-3/00C_Equations/Equation_Firms-Problem_Expected-Payoff-Maximization-Problem.tex}
+As shown, we normalize the low- and high-quality reserves of well sites to 1. In this formulation, $\lambda_{a} Pr_{t}^{g} \hspace{0.15cm} (\equiv h_{t}^{g})$ means the hazard rate of drilling at time $t$. 
+
+When the firm is drilling (i.e., $R_{t}^{g} > 0$ and $Pr_{t}^{g} \in (0, 1)$), the necessary conditions of the Hamiltonian-Lagrangian for the firm's problem are as follows\footnote{The Hamiltonian-Lagrangian of the firm's problem is presented in \ref{C3-Appendix_Derivations_Firms-Problem_Necessary-Conditions}.}:
+\input{04_Chapter-3/00C_Equations/Equation_Firms-Problem_Necessary-Conditions.tex}
+With some algebra and the assumption of no exogenous price change, the necessary conditions (\ref{Equation:Firms-Problem_Necessary-Conditions_Drilling-Probability}) and (\ref{Equation:Firms-Problem_Necessary-Conditions_Costate-Variable}) yields the equation (\ref{Equation:Firms-Problem_Euler-Equation}).\footnote{The derivation details are described in \ref{C3-Appendix_Derivations_Euler-Equation-for-the-Firms-Problem}.}  Importantly, the identical equation in both optimization levels suggests that the firm's optimal drilling decision for a particular well site leads to the optimal path at the firm level. 
+
+
+\par
+\vspace{0.3cm}
+\noindent
+\textit{\textbf{Aggregate Drilling and Production}} ---
+For the firm's reserves of well sites with a specific quality $g \in \mathcal{Q}$, the drilling and production are as follows:
+\input{04_Chapter-3/00C_Equations/Equation_Firms-Problem_Drilling-and-Production.tex}
+Therefore, the firm's aggregate drilling and production are simply the sum of drilling and production over different qualities. 
+
+The equations for aggregate drilling and production imply two interesting points. First, $D_{t}^{g}$ converges to $E^{g}$ as time goes by, which implies no change in the amount of the remaining reserves, because $\lim_{t \to \infty} R_{t}^{g} = E^{g} / h_{t}^{g}$.\footnote{With some algebra, we find that $R_{t}^{g} = E^{g}/h_{t}^{t} \ + \ (R_{0}^{g} - E^{g}/h_{t}^{g}) e^{-h^{g} t}$.} Second, the firm first develops high-quality well locations. In other words, per-drilling oil production decreases as time $t$ goes to infinity. 

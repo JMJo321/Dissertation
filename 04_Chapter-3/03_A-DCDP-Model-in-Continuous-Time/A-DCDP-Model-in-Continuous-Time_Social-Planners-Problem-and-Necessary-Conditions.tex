@@ -1,0 +1,24 @@
+In the continuous-time DCDP framework, the social planner's problem is given by
+\input{04_Chapter-3/00C_Equations/Equation_Social-Planners-Problem_Formulation.tex}
+The third term in the square bracket represents the expected value of choice-specific utility shocks for the undeveloped well sites at time $t$. In this formulation, we further assume that fracking firms will have additional new well sites (denoted $E$) augmented at a constant rate due to their exploration efforts. 
+
+The current-value Hamiltonian-Lagrangian of the social planner's problem is given by
+\input{04_Chapter-3/00C_Equations/Equation_Social-Planners-Problem_Hamiltonian-Lagrangian.tex}
+
+The necessary conditions of the current-value Hamiltonian-Lagrangian are as follows:
+\input{04_Chapter-3/00C_Equations/Equation_Social-Planners-Problem_Necessary-Conditions.tex}
+
+The costate variable $\pi_{t}$ can be expressed as a function of $R_{t}$ and $Pr_{t}$ from condition (\ref{Equation:Social-Planners-Problem_Necessary-Conditions_Drilling-Probability}) if $Pr_{t} \in (0,1)$ (i.e., $\lambda_{2,t}, \lambda_{3,t} = 0$):
+\input{04_Chapter-3/00C_Equations/Equation_Social-Planners-Problem_Necessary-Conditions_Meaning-of-Costate-Variable.tex}
+And when $R_{t} > 0$, condition (\ref{Equation:Social-Planners-Problem_Necessary-Conditions_Costate-Variable}) is given by
+\input{04_Chapter-3/00C_Equations/Equation_Social-Planners-Problem_Necessary-Conditions_Simplified-Costate-Variable.tex}
+We will discuss the implications of those two conditions later. 
+
+
+The social planner's problem has a steady state $(R_{ss}, \pi_{ss})$. By definition, each of the two state variables of the dynamic optimization problem is on its nullcline at the steady state. In other words, the change in each of them is zero at the steady state (i.e., $\dot{R}_{ss}, \dot{\pi}_{ss} = 0$). From the necessary conditions (\ref{Equation:Social-Planners-Problem_Law-of-Motion}) and (\ref{Equation:Social-Planners-Problem_Necessary-Conditions_Costate-Variable}), it is obvious that at steady state $R_{t}$ and $\pi_{t}$ satisfy the following system of equations:
+\input{04_Chapter-3/00C_Equations/Equation_Social-Planners-Problem_System-of-Equations-for-Steady-State.tex}
+On top of the system of equations, the necessary condition (\ref{Equation:Social-Planners-Problem_Meaning-of-Costate-Variable}) has to hold at the steady state. Solving the three equations simultaneously, we can identify $(R_{ss}, \pi_{ss})$, including the value of the control variable at the steady state (i.e., $Pr_{ss}$). Of note, the first equation in (\ref{Equation:Social-Planners-Problem_System-of-Equations-for-Steady-State}) demonstrates that $R_{ss}$ can be positive if $E \neq 0$.
+
+The steady state $(R_{ss}, \pi_{ss})$ has the saddle property.\footnote{Refer to \textit{9.5 Steady states in autonomous infinite-horizon problems} in \cite{Optimal-Control-Theory-and-Static-Optimization-in-Economics_Leonard-and-Long_1992}.} Using a Taylor series approximation, $\dot{R}_{t}$ and $\dot{\pi}_{t}$ can be linearized near the steady state\footnote{Details are provided in \ref{C3-Appendix_Derivations_Linearization-near-the-Steady-State-of-the-Social-Planners-Problem}.}:
+\input{04_Chapter-3/00C_Equations/Equation_Social-Planners-Problem_Linearized-System-of-Equation-near-Steady-State.tex}
+Since the determinant of the coefficient matrix is negative, the steady state of the infinite-horizon maximization problem is a saddle point. The phase diagram in Figure \ref{Figure:Phase-Diagram_Saddle-Point} confirms it too.

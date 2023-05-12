@@ -1,0 +1,122 @@
+% ----- Introduction -----
+\section{Introduction}
+\label{C3-Section:Introduction}
+\input{04_Chapter-3/01_Introduction/Introduction.tex}
+
+
+
+% ----- Data and Empirical Analysis -----
+\section{Data and Empirical Analysis}
+\label{C3-Section:Data-and-Empirical-Analysis}
+
+% Data and Empirical Analysis: Data
+\subsection{Data}
+\label{C3-SubSection:Data}
+This section summarizes data on wells, geology, and oil prices, which are utilized to conduct empirical analysis and estimate a model of drilling behaviors observed in North Dakota. 
+
+\subsubsection{Well Data}
+\label{C3-SubSubSection:Well-Data}
+\input{04_Chapter-3/02_Data-and-Empirical-Analysis/Data-and-Empirical-Analysis_Well-Data.tex}
+
+\subsubsection{Geological Survey Data}
+\label{C3-SubSubSection:Geological-Survey-Data}
+\input{04_Chapter-3/02_Data-and-Empirical-Analysis/Data-and-Empirical-Analysis_Geological-Survey-Data.tex}
+
+\subsubsection{Oil Price Data}
+\label{C3_SubSubSection:Oil-Price-Data}
+\input{04_Chapter-3/02_Data-and-Empirical-Analysis/Data-and-Empirical-Analysis_Oil-Price-Data.tex}
+
+
+% Data and Empirical Analysis: Empirical Analysis
+\subsection{Empirical Analysis}
+\label{C3-SubSection:Empirical-Analysis}
+
+\subsubsection{Correlation between Oil Prices and Horizontal Drilling in North Dakota}
+\label{C3-SubSubSection:Correlation-between-Oil-Prices-and-Horizontal-Drilling-in-ND}
+\input{04_Chapter-3/02_Data-and-Empirical-Analysis/Data-and-Empirical-Analysis_Correlation-between-Oil-Prices-and-Horisontal-Drilling-in-ND.tex}
+
+\subsubsection{The Role of Geological Quality in Horizontal Drilling}
+\label{C3-SubSubSection:The-Role-of-Geological-Quality-in-Horizontal-Drilling}
+\input{04_Chapter-3/02_Data-and-Empirical-Analysis/Data-and-Empirical-Analysis_Estimation-of-Unobservable-Geological-Characteristics-of-Horizontal-Wells.tex}
+\input{04_Chapter-3/02_Data-and-Empirical-Analysis/Data-and-Empirical-Analysis_Simultaneous-Drilling-of-Horizontal-Wells-with-Heterogeneous-Geological-Qualities.tex}
+\input{04_Chapter-3/02_Data-and-Empirical-Analysis/Data-and-Empirical-Analysis_High-Sensitivity-of-Drilling-Low-quality-Horizontal-Wells-to-Negative-Price-Shocks.tex}
+
+
+
+% ----- A DCDP Model in Continuous Time for Drilling Decisions in Oil and Gas Extraction -----
+\section{A DCDP Model in Continuous Time for Drilling Decisions in Oil and Gas Extraction}
+\label{C3-Section:A-DCDP-Model-in-Continuous-Time}
+This section delves into the analysis of two distinct economic frameworks. In Section \ref{C3-SubSection:A-Limitation-of-AKS-style-Model}, the optimal oil drilling and extraction model developed in \cite{Hotelling-under-Pressure_AKS_2018} is reformulated by introducing heterogeneity in well quality. And it is shown that the recast model cannot justify the empirically observed simultaneous drilling of well locations with varying quality levels. In the subsequent portions of this section, a continuous-time Discrete Choice Dynamic Programming (DCDP) model for oil and gas extraction is developed, successfully incorporating the simultaneous drilling of horizontal wells with heterogeneous quality.
+
+% A Limitation of AKS-style Model
+\subsection{A Limitation of AKS-style Model}
+\label{C3-SubSection:A-Limitation-of-AKS-style-Model}
+\input{04_Chapter-3/03_A-DCDP-Model-in-Continuous-Time/A-DCDP-Model-in-Continuous-Time_A-Limitation-of-AKS-style-Model.tex}
+
+% Setup
+\subsection{Setup}
+\label{C3-SubSection:Setup}
+\input{04_Chapter-3/03_A-DCDP-Model-in-Continuous-Time/A-DCDP-Model-in-Continuous-Time_Setup.tex}
+
+% Social Planner's Problem
+\subsection{Social Planner's Problem and Necessary Conditions}
+\label{C3-SubSection:Social-Planners-Problem-and-Necessary-Conditions}
+\input{04_Chapter-3/03_A-DCDP-Model-in-Continuous-Time/A-DCDP-Model-in-Continuous-Time_Social-Planners-Problem-and-Necessary-Conditions.tex}
+
+\subsubsection{Implications of Necessary Conditions}
+\label{C3-SubSubSection:Necessary-Conditions}
+\input{04_Chapter-3/03_A-DCDP-Model-in-Continuous-Time/A-DCDP-Model-in-Continuous-Time_Social-Planners-Problem-and-Necessary-Conditions_Implications.tex}
+
+% Firm's Problem
+\subsection{Firm's Problem}
+\label{C3-SubSection:Firms-Problem}
+In this section, we develop the firm's problem under the settings of our DCDP model in continuous time. We first introduce additionally required building blocks. In particular, we integrate heterogeneity in the quality of well sites into the problem. Following \cite{Estimation-of-Dynamic-Discrete-Choice-Models-in-Continuous-Time_ABBE_2016}, we formulate the value function for a given well site. And then, utilizing the value function, we show that the oil market clears. In addition, we formulate firm-level optimal paths by aggregating the firm's well-level drilling decisions. 
+
+\subsubsection{Firm's Decisions on Drilling Well Sites with Heterogeneous Qualities}
+\label{C3-SubSubSection:Firms-Decisions-on-Drilling-Well-Sites-with-Heterogeneous-Qualities}
+\input{04_Chapter-3/03_A-DCDP-Model-in-Continuous-Time/A-DCDP-Model-in-Continuous-Time_Firms-Decisions-on-Drilling-Well-Sites-with-Heterogeneous-Qualities.tex}
+
+\subsubsection{Aggregation of Well-Level Drilling Decisions}
+\label{C3-SubSubSection:Aggregation-of-Well-Level-Drilling-Decisions}
+\input{04_Chapter-3/03_A-DCDP-Model-in-Continuous-Time/A-DCDP-Model-in-Continuous-Time_Aggregation-of-Well-Level-Drilling-Decisions.tex}
+
+
+
+% ----- Equilibrium Dynamics with Oil Prices -----
+\section{Equilibrium Dynamics with Oil Prices}
+\label{C3-Section:Equilibrium-Dynamics-with-Oil-Prices}
+This section examines how the time paths for drilling and production evolve under two different scenarios for oil prices: exogenous and endogenous oil prices. Regarding the exogenous-price case, using the Implicit Function Theorem, we first predict the impact of a sudden price variation on the drilling probability. Then, we demonstrate how the equilibrium paths for drilling and production respond to unexpected price shocks. In addition, we show the resulting changes in per-drilling oil production. For the endogenous-price case, we compute the equilibrium path for drilling and then compare it with that under exogenous oil prices to illustrate their differences. 
+
+\subsection{The Case of Exogenous Oil Prices}
+\label{C3-SubSection:The-Case-of-Exogenous-Oil-Prices}
+\input{04_Chapter-3/04_Equilibrium-Dynamics-with-Oil-Prices/Equilibrium-Dynamics-with-Oil-Prices_Exogenous-Oil-Prices.tex}
+
+\subsection{The Case of Endogenous Oil Prices}
+\label{C3-SubSection:The-Case-of-Endogenous-Oil-Prices}
+\input{04_Chapter-3/04_Equilibrium-Dynamics-with-Oil-Prices/Equilibrium-Dynamics-with-Oil-Prices_Endogenous-Oil-Prices.tex}
+
+
+
+%% ----- Identification and Estimation -----
+%\section{Identification and Estimation}
+%\label{C3-Section:Identification-and-Estimation}
+%\input{04_Chapter-3/05_Identification-and-Estimation/Identification-and-Estimation.tex}
+
+
+
+%% ----- Counterfactual Simulations -----
+%\section{Counterfactual Simulations}
+%\label{C3-Section:Counterfactural-Simulations}
+%\input{04_Chapter-3/06_Counterfactual-Simulations/Counterfactual-Analysis.tex}
+
+
+
+% ----- Conclusion -----
+\section{Conclusion}
+\label{C3-Section:Conclusion}
+\input{04_Chapter-3/07_Conclusion/Conclusion.tex}
+
+
+
+% ----- Figures and Tables -----
+\input{04_Chapter-3/Dissertation_Chapter-3_Figures-and-Tables.tex}
