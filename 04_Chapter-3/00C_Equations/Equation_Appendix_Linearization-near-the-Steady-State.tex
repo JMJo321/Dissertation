@@ -1,0 +1,38 @@
+Using a Taylor series expansion, $\dot{R}_{t}$ can be approximated near the steady state ($R_{ss}$, $\pi_{ss}$):
+\begin{equation*}
+\begin{split}
+    \dot{R}_{t} \ 
+    & \approx \ (-R_{ss} Pr_{ss} \ + \ E) \ + \ \frac{\partial}{\partial R_{t}} (-R_{t} Pr_{t} \ + \ E) (R_{t} \ - \ R_{ss}) \ + \ \frac{\partial}{\partial \pi_{t}} (-R_{t} Pr_{t} \ + \ E) (\pi_{t} \ - \ \pi_{ss}) \\
+    & = \ 0 \ + \ (-Pr_{t}) (R_{t} \ - \ R_{ss}) \ + \ (0) (\pi_{t} \ - \ \pi_{ss}) \\
+    & = \ (-Pr_{t}) (R_{t} \ - \ R_{ss}).
+\end{split}
+\end{equation*}
+In the same way, the linear approximation of $\dot{\pi}_{t}$ near the steady state ($R_{ss}$, $\pi_{ss}$) is given by
+\begin{equation*}
+\begin{split}
+    \dot{\pi}_{t} \ 
+    & \approx \ \left(r \pi_{ss} \ - \ \sigma \big( \gamma \ - \ \ln(1 - Pr_{ss}) \big) \right) \\
+    & \hspace{1.0cm} + \ \frac{\partial}{\partial R_{t}} \left(r \pi_{t} \ - \ \sigma \big( \gamma \ - \ \ln(1 - Pr_{ss}) \big) \right) (R_{t} \ - \ R_{ss}) \\
+    & \hspace{1.0cm} + \ \frac{\partial}{\partial \pi_{t}} \left(r \pi_{t} \ - \ \sigma \big( \gamma \ - \ \ln(1 - Pr_{ss}) \big) \right) (\pi_{t} \ - \ \pi_{ss}) \\
+    & = \ 0 \ + \ (0) (R_{t} \ - \ R_{ss}) \ + \ (r) (\pi_{t} \ - \ \pi_{ss}) \\
+    & = \ (r) (\pi_{t} \ - \ \pi_{ss}).
+\end{split}
+\end{equation*}
+From those two approximations, the linearized system near the steady state ($R_{ss}$, $\pi_{ss}$) is
+\begin{equation*}
+\begin{split}
+    \begin{pmatrix}
+        \dot{R}_{t} \\
+        \dot{\pi}_{t}
+    \end{pmatrix} \ 
+    & = \ 
+    \begin{pmatrix}
+        -Pr_{t} & 0 \\
+        0 & r
+    \end{pmatrix}
+    \begin{pmatrix}
+        R_{t} \ - \ R_{ss} \\
+        \pi_{t} \ - \ \pi_{ss}
+    \end{pmatrix}.
+\end{split}
+\end{equation*}
