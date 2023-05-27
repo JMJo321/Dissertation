@@ -1,0 +1,56 @@
+\afterpage{
+    \begin{table}[t!]
+        \centering
+        \caption{Heterogeneity in Household Responses: Treatment Effect at the Higher Base Usage Quantity}
+        \label{Table:Heterogeneity-in-Household-Responses:At-the-Higher-BUQ}
+        \vspace{0.3cm}
+        \small
+        \begin{adjustbox}{scale = 0.85}
+            \begin{threeparttable}
+                \begin{tabular}{@{\extracolsep{3pt}}lcccccccc}
+                    \\[-5.5ex]
+                    \hline \hline
+                    \\[-3.0ex]
+                    & \multicolumn{8}{c}{Dependent Variable} \\
+                    \\[-3.0ex]
+                    \cline{2-9}
+                    \\[-3.0ex]
+                    & \multicolumn{8}{c}{Average Daily Electricity Consumption  (kWh/Day)} \\
+                    \\[-3.0ex]
+                    & (1) & (2) & (3) & (4) & (5) & (6) & (7) & (8) \\
+                    \\[-3.0ex]
+                    \hline
+                    \\[-2.0ex]
+                    $\mathbb{1}$[Treatment] & 0.045 & $-$0.009 & 0.002 & 0.003 & $-$0.007 & $-$0.022$^{*}$ & $-$0.006 & $-$0.011 \\ 
+                    & (0.037) & (0.028) & (0.024) & (0.022) & (0.018) & (0.012) & (0.015) & (0.018) \\ 
+                    & & & & & & & & \\ 
+                    NC0 & 0.299$^{***}$ & 0.300$^{***}$ & 0.296$^{***}$ & 0.297$^{***}$ & 0.299$^{***}$ & 0.287$^{***}$ & 0.315$^{***}$ & 0.310$^{***}$ \\ 
+                    & (0.010) & (0.007) & (0.007) & (0.007) & (0.007) & (0.008) & (0.011) & (0.013) \\ 
+                    & & & & & & & & \\ 
+                    $\mathbb{1}$[Treatment] $\times$ NC0 & $-$0.037$^{**}$ & $-$0.012$^{***}$ & $-$0.009$^{***}$ & $-$0.013$^{***}$ & $-$0.016$^{***}$ & $-$0.021$^{***}$ & $-$0.029$^{***}$ & $-$0.028$^{***}$ \\ 
+                    & (0.014) & (0.004) & (0.003) & (0.003) & (0.003) & (0.004) & (0.005) & (0.006) \\ 
+                    & & & & & & & & \\ 
+                    Average Daily CDDs & 1.604$^{***}$ & 1.598$^{***}$ & 1.586$^{***}$ & 1.573$^{***}$ & 1.559$^{***}$ & 1.526$^{***}$ & 1.518$^{***}$ & 1.535$^{***}$ \\ 
+                    & (0.149) & (0.148) & (0.147) & (0.145) & (0.144) & (0.144) & (0.151) & (0.163) \\ 
+                    & & & & & & & & \\ 
+                    Average Daily HDDs & 0.500$^{***}$ & 0.504$^{***}$ & 0.500$^{***}$ & 0.493$^{***}$ & 0.484$^{***}$ & 0.418$^{**}$ & 0.927$^{***}$ & 1.019$^{***}$ \\ 
+                    & (0.153) & (0.151) & (0.148) & (0.144) & (0.141) & (0.165) & (0.203) & (0.306) \\ 
+                    & & & & & & & & \\
+                    \hline
+                    \\[-2.0ex]
+                    Bandwidth & 5\% & 10\% & 15\% & 20\% & 25\% & 30\% & 35\% & 40\% \\ 
+                    FEs: Billing Year-by-Month & Yes & Yes & Yes & Yes & Yes & Yes & Yes & Yes \\ 
+                    Observations & 1,008,265 & 2,024,211 & 3,056,688 & 4,098,107 & 5,173,016 & 5,699,991 & 3,865,674 & 3,926,154 \\ 
+                    Adjusted R$^{2}$ & 0.368 & 0.378 & 0.395 & 0.416 & 0.442 & 0.605 & 0.610 & 0.648 \\ 
+                    \\[-2.0ex]
+                    \hline \hline
+                    \\[-4.5ex]
+                \end{tabular}
+                \begin{tablenotes}[flushleft]
+                    \footnotesize
+                    \item \textit{Note}: * $p < 0.1$, ** $p < 0.05$, and *** $p < 0.01$.
+                \end{tablenotes}
+            \end{threeparttable}
+        \end{adjustbox}
+    \end{table}
+}
