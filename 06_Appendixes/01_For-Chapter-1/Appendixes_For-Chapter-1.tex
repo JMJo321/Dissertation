@@ -1,0 +1,57 @@
+\subsection{Additional Figure(s) and Table(s)}
+% 1. Figure(s)
+% \afterpage{
+    \begin{figure}[ht!]
+        \centering
+        \includegraphics[scale = 0.133]{02_Chapter-1/00A_Figures/Figure_SMUD-Residential-Rates_Fixed-Charge.png}
+        \caption{Fixed Charge of SMUD Residential Rates}
+        \caption*{
+            {\small
+            \textit{Note}: 
+            The figure shows how SMUD changed the monthly fixed charge over time. The same fixed charge applies to households that choose one of the three major residential rate plans (i.e., RSCH, RSEH, and RSGH).
+        }}
+        \label{Figure:SMUD-Residential-Rates_Fixed-Charge}
+    \end{figure}
+% }
+
+\afterpage{
+    \begin{figure}[t!]
+        \centering
+        \includegraphics[scale = 0.105]{02_Chapter-1/00A_Figures/Figure_Household-Average-Daily-Consumption-by-Month.png}
+        \caption{Household Average Daily Electricity Consumption by Month of Year}
+        \caption*{
+            {\small
+            \textit{Note}: 
+            This figure depicts, for each of SMUD residential rate plans, how households' average daily electricity consumption varied across months of the year. The red and blue dot-dash lines represent the lower and higher base usage quantities in each month of the year, respectively. The three rate plans show similar consumption and seasonal patterns. 
+        }}
+        \label{Figure:Household-Average-Daily-Electricity-Consumption-by-Month-of-Year}
+    \end{figure}
+}
+\clearpage
+
+% \afterpage{
+    \begin{figure}[ht!]
+        \centering
+        \includegraphics[scale = 0.120]{02_Chapter-1/00A_Figures/Figure_Residuals-of-the-Average-Daily-Electricity-Consumption-in-Period-0-over-NC0_From-BW5-to-BW40.png}
+        \caption{The Impact of the Change in the Marginal Price due to Surpassing the Lower Base Usage Quantity}
+        \caption*{
+            {\small
+            \textit{Note}: 
+            In this figure, scatter dots correspond to the mean of residuals, computed by bins with a bandwidth of 0.5\%, from a regression of households' average daily electricity consumption in Period 1 on $\widebar{NC}_{0}$, HDDs and CDDs. As described, a linear model fits those scatter points well, even for a wide bandwidth. 
+        }}
+        \label{Figure:The-Impact-of-the-Change-in-the-MP-due-to-Surpassing-the-Lower-BUQ}
+    \end{figure}
+% }
+\clearpage
+
+
+
+% 2. Table(s)
+\input{02_Chapter-1/00B_Tables/Table_Robustness-Checks_Functional-Forms_3rd-and-4th-Order-Polynomial-Models.tex}
+\clearpage
+
+\input{02_Chapter-1/00B_Tables/Table_Robustness-Checks_BWs_Without-FEs.tex}
+\clearpage
+
+\input{02_Chapter-1/00B_Tables/Table_Robustness-Checks_BWs_RSGH.tex}
+\clearpage

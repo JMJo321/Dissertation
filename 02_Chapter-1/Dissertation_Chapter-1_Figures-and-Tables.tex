@@ -2,11 +2,11 @@
 \afterpage{
     \begin{figure}[t!]
         \centering
-        \includegraphics[scale = 0.105]{02_Chapter-1/00A_Figures/Figure_SMUD-Residential-Rates_Variable-Charges-and-Base-Usage-Quantities.png}
+        \includegraphics[scale = 0.097]{02_Chapter-1/00A_Figures/Figure_SMUD-Residential-Rates_Variable-Charges-and-Base-Usage-Quantities.png}
         \caption{Tier Rates and Base Usage Quantities of SMUD Residential Rates}
         \subcaption*{
             \textit{Note}: 
-            The figure illustrates how SMUD changed tier rates and base usage quantities of the three major residential rates (i.e., RSCH, RSEH, and RSGH) over time. Both tier rates and base usage quantities of the residential rates show significant seasonality. RSCH and RSEH residential rates had the same base usage quantities. There have been only two tiers since September 2009.
+            The figure illustrates how SMUD changed tier rates and base usage quantities of the three major residential rate plans (i.e., RSCH, RSEH, and RSGH) over time. Both tier rates and base usage quantities show significant seasonality. The two rate plans for electric-heating households (i.e., RSCH and RSEH) had the same base usage quantities. There have been only two tiers since September 2009.
         }
         \label{Figure:SMUD-Residential-Rates_Variable-Charge-and-Base-Usage}
     \end{figure}
@@ -16,11 +16,11 @@
 \afterpage{
     \begin{figure}[t!]
         \centering
-        \includegraphics[scale = 0.107]{02_Chapter-1/00A_Figures/Figure_Distribution-of-Electricity-Consumption.png}
+        \includegraphics[scale = 0.101]{02_Chapter-1/00A_Figures/Figure_Distribution-of-Electricity-Consumption.png}
         \caption{Distribution of Electricity Consumption by SMUD Residential Customers}
         \subcaption*{
             \textit{Note}: 
-            This figure presents histograms---with kernel density estimates---of electricity consumption by SMUD residential customers. Each of the six panels in the figure is for a pair of three major residential rates (i.e., RSCH, RSEH, and RSGH) and two seasons (i.e., summer and winter). Dot-dashed vertical lines in each panel are base usage quantities for the corresponding rate code and season.
+            This figure presents histograms, with kernel density estimates, for electricity consumption by SMUD residential customers. Each of the six panels in the figure is for a pair of three major residential rates (i.e., RSCH, RSEH, and RSGH) and two seasons (i.e., summer and winter). Dot-dashed vertical lines in each panel are base usage quantities for the corresponding rate code and season.
         }
         \label{Figure:SMUD-Billing-Data_Histogram_By-Season-and-Rate-Code}
     \end{figure}
@@ -34,7 +34,7 @@
         \caption{Mean of Average Daily Electricity Consumption in Period 1 over $\overline{NC}_{0}$}
         \subcaption*{
             \textit{Note}: 
-            ...
+            This figure's scatter points correspond to the average daily electricity consumption in Period 1, computed by bins with a bandwidth of 1\% of $\overline{NC}_{0}$. The solid line on each side of the vertical dot-dash line is a parametric fit obtained from the regression of the average daily electricity consumption on $\overline{NC}_{0}$. The dashed red line is an extension of the solid red line. The gap between the dashed red and solid blue lines seems to indicate a non-negligible treatment effect. 
         }
         \label{Figure:Average-Daily-Electricity-Consumption-in-Period-1-over-NC0}
     \end{figure}
@@ -48,7 +48,7 @@
         \caption{Mean of Average Daily Electricity Consumption in Period 0 over $\overline{NC}_{0}$}
         \subcaption*{
             \textit{Note}: 
-            ...
+            In this figure, the scatter points correspond to the average daily electricity consumption in Period 0, calculated by binds with a bandwidth of 1\% of $\overline{NC}_{0}$. As can be seen, the average daily electricity consumption evolves smoothly around the cutoff point (i.e., $\overline{NC}_{0} = 0$). 
         }
         \label{Figure:Average-Daily-Electricity-Consumption-in-Period-0-over-NC0}
     \end{figure}
@@ -58,11 +58,25 @@
 \afterpage{
     \begin{figure}[t!]
         \centering
-        \includegraphics[scale = 0.14]{02_Chapter-1/00A_Figures/Figure_Falsification-Tests_With-False-Cutoff-40-and-M30.png}
+        \includegraphics[scale = 0.143]{02_Chapter-1/00A_Figures/Figure_Share-of-Over-Responding-Households_RSGH.png}
+        \caption{The Share of Over-Responding Households}
+        \subcaption*{
+            \textit{Note}: 
+            This figure shows, for different price elasticities of household electricity consumption, how the share of over-responding households varies with the value of the RD estimates. Two price elasticities for SMUD residential customers are in \cite{SmartPricing-Options-Final-Evaluation_SMUD_2014}, whereas the remaining price elasticity, estimated from PG\&E residential customers' billing data, is from \cite{Do-Consumers-Respond-to-Marginal-or-Average-Price?-Evidence-from-Nonlinear-Electricity-Pricing_2014_(Ito)}. See the text for details. 
+        }
+        \label{Figure:Share-of-Over-Responding-Households_RSGH}
+    \end{figure}
+}
+\clearpage
+
+\afterpage{
+    \begin{figure}[t!]
+        \centering
+        \includegraphics[scale = 0.133]{02_Chapter-1/00A_Figures/Figure_Falsification-Tests_With-False-Cutoff-40-and-M30.png}
         \caption{Robustness Checks: Falsification Tests}
         \subcaption*{
             \textit{Note}: 
-            ...
+            This figure shows the results of falsification tests exploiting two placebo thresholds at $-30$\% and 40\% from the point $\overline{NC}_{0} = 0$. As depicted, no RD estimate is statistically different from zero. See the text for details. 
         }
         \label{Figure:Robustness-Checks_Falsification-Tests}
     \end{figure}
@@ -72,11 +86,11 @@
 \afterpage{
     \begin{figure}[t!]
         \centering
-        \includegraphics[scale = 0.135]{02_Chapter-1/00A_Figures/Figure_Multi-Period-Treatment-Effects_By-Season.png}
+        \includegraphics[scale = 0.133]{02_Chapter-1/00A_Figures/Figure_Multi-Period-Treatment-Effects_By-Season.png}
         \caption{Multi-Period Treatment Effects}
         \subcaption*{
             \textit{Note}: 
-            ... 
+            This figure summarizes the estimated multi-period treatment effects. The over-period evolving pattern of the estimates for electric-heating households (i.e., households selecting either the RSCH or RSEH rate plan) is significantly different from that of the estimates for non-electric-heating households (i.e., households choosing the RSGH rate code). See the text for details. 
         }
         \label{Figure:Multi-Period-Treatment-Effects}
     \end{figure}

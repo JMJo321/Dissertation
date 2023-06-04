@@ -1,0 +1,57 @@
+\afterpage{
+    \begin{table}[t!]
+        \centering
+        \caption{Robustness Checks: For Different Bandwidths, Only RSGH Rate Code}
+        \label{Table:Robustness-Checks_BWs_RSGH}
+        \vspace{0.3cm}
+        \small
+        \begin{adjustbox}{scale = 0.72}
+            \begin{threeparttable}
+                \begin{tabular}{@{\extracolsep{5pt}}lcccccccc}
+                    \\[-5.5ex]
+                    \hline \hline
+                    \\[-3.0ex]
+                    & \multicolumn{8}{c}{Dependent Variable} \\
+                    \\[-3.0ex]
+                    \cline{2-9}
+                    \\[-3.0ex]
+                    & \multicolumn{8}{c}{Average Daily Electricity Consumption  (kWh/Day)} \\
+                    \\[-3.0ex]
+                    & (1) & (2) & (3) & (4) & (5) & (6) & (7) & (8) \\
+                    \\[-3.0ex]
+                    \hline
+                    \\[-2.0ex]
+                    $\mathbb{1}$[Treatment] & $-$0.055$^{***}$ & $-$0.060$^{***}$ & $-$0.055$^{***}$ & $-$0.065$^{***}$ & $-$0.064$^{***}$ & $-$0.058$^{***}$ & $-$0.068$^{***}$ & $-$0.080$^{***}$ \\ 
+                    & (0.020) & (0.016) & (0.015) & (0.014) & (0.013) & (0.013) & (0.021) & (0.024) \\ 
+                    & & & & & & & & \\ 
+                    NC0 & 0.211$^{***}$ & 0.215$^{***}$ & 0.215$^{***}$ & 0.216$^{***}$ & 0.216$^{***}$ & 0.217$^{***}$ & 0.234$^{***}$ & 0.229$^{***}$ \\ 
+                    & (0.008) & (0.006) & (0.005) & (0.005) & (0.005) & (0.006) & (0.008) & (0.010) \\ 
+                    & & & & & & & & \\ 
+                    $\mathbb{1}$[Treatment] $\times$ NC0 & $-$0.005 & $-$0.010$^{***}$ & $-$0.013$^{***}$ & $-$0.012$^{***}$ & $-$0.014$^{***}$ & $-$0.016$^{***}$ & $-$0.021$^{***}$ & $-$0.020$^{***}$ \\ 
+                    & (0.006) & (0.003) & (0.002) & (0.001) & (0.002) & (0.002) & (0.003) & (0.004) \\ 
+                    & & & & & & & & \\ 
+                    Average Daily CDDs & 1.170$^{***}$ & 1.172$^{***}$ & 1.174$^{***}$ & 1.174$^{***}$ & 1.172$^{***}$ & 1.171$^{***}$ & 1.162$^{***}$ & 1.190$^{***}$ \\ 
+                    & (0.106) & (0.108) & (0.108) & (0.107) & (0.107) & (0.106) & (0.114) & (0.126) \\ 
+                    & & & & & & & & \\ 
+                    Average Daily HDDs & 0.224$^{**}$ & 0.227$^{**}$ & 0.227$^{**}$ & 0.228$^{**}$ & 0.228$^{**}$ & 0.229$^{**}$ & 0.547$^{***}$ & 0.708$^{***}$ \\ 
+                    & (0.090) & (0.090) & (0.090) & (0.089) & (0.088) & (0.087) & (0.133) & (0.186) \\ 
+                    & & & & & & & & \\
+                    \hline
+                    \\[-2.0ex]
+                    Rate Code & RSGH & RSGH & RSGH & RSGH & RSGH & RSGH & RSGH & RSGH \\ 
+                    Bandwidth & 5\% & 10\% & 15\% & 20\% & 25\% & 30\% & 35\% & 40\% \\ 
+                    FEs: Billing Year-by-Month & Yes & Yes & Yes & Yes & Yes & Yes & Yes & Yes \\ 
+                    Observations & 967,546 & 1,941,332 & 2,909,164 & 3,832,683 & 4,738,070 & 5,604,830 & 3,396,312 & 3,191,411 \\ 
+                    Adjusted R$^{2}$ & 0.475 & 0.486 & 0.503 & 0.524 & 0.547 & 0.571 & 0.576 & 0.613 \\
+                    \\[-2.0ex]
+                    \hline \hline
+                    \\[-4.5ex]
+                \end{tabular}
+                \begin{tablenotes}[flushleft]
+                    \footnotesize
+                    \item \textit{Note}: This table shows the results of regressions with observations only for households selecting the RSGH rate plan. Standard errors in parentheses are clustered at the household and billing year-by-month levels to allow correlations across households in a given month; * $p < 0.1$, ** $p < 0.05$, and *** $p < 0.01$.
+                \end{tablenotes}
+            \end{threeparttable}
+        \end{adjustbox}
+    \end{table}
+}

@@ -1,7 +1,22 @@
 \noindent
 \textit{\textbf{Regression Discontinuity Results for Different Bandwidths and Functional Forms}} --- 
+\input{02_Chapter-1/00B_Tables/Table_Robustness-Checks_BWs.tex}
 Table \ref{Table:Robustness-Checks_BWs} summarizes the regression results for a set of different bandwidths. The estimated treatment effect for the households in a very narrow range from the lower base usage quantity (i.e., the households within the bandwidth of 5\%) is not statistically significant even at the 10\% level. Except for the bandwidth of 5\%, the treatment estimates range from $-$0.038 to $-$0.069 and statistically differ from zero at least at the 5\% level. The estimated treatment effect is almost identical for the bandwidths of 10\% and 15\%. For wider bandwidths falling between 20\% and 40\%, the magnitude of the estimated treatment effect increases and remains stable.\footnote{The number of observations increases with the size of the bandwidth exploited, except the two widest ones. The exceptions are because I drop observations crossing the higher base usage quantity to avoid picking up the effect of surpassing the higher cutoff point.} Interestingly, this table clearly shows that the wider the bandwidth employed, the larger the estimated treatment effect. In other words, the treatment estimates approach zero as I move even closer to the lower base usage quantity.
 
+\afterpage{
+    \begin{figure}[t!]
+        \centering
+        \includegraphics[scale = 0.133]{02_Chapter-1/00A_Figures/Figure_Falsification-Tests_With-False-Cutoff-40-and-M30.png}
+        \caption{Robustness Checks: Falsification Tests}
+        \caption*{
+            {\small
+            \textit{Note}: 
+            This figure shows the results of falsification tests exploiting two placebo thresholds at $-30$\% and 40\% from the point $\overline{NC}_{0} = 0$. As depicted, no RD estimate is statistically different from zero. See the text for details. 
+        }}
+        \label{Figure:Robustness-Checks_Falsification-Tests}
+    \end{figure}
+}
+\input{02_Chapter-1/00B_Tables/Table_Robustness-Checks_Functional-Forms_1st-and-2nd-Order-Polynomial-Models.tex}
 There are several possible explanations for this monotonic trend in the treatment effect. First, it may be more difficult or demanding for SMUD residential customers near the threshold to notice, from their monthly bill statements, that their electricity consumption in the previous billing month barely exceeded the lower base usage quantity, which in turn made them experience a discontinuous increase in the marginal price. Second, households whose electricity consumption just surpassed the cutoff point in a billing cycle could intentionally ignore the lagged price signal in the subsequent billing cycle. Some of them likely understood that their immediate electricity consumption was utterly irrelevant to the signal. And it is also possible that adjusting their electricity consumption pattern against the lagged marginal price during a whole billing month led to too much cost for some treated households very near the threshold compared to its benefit. Third, households near the lower base usage quantity may respond differently to the lagged marginal price compared to those farther from the threshold. Specifically, conditional on a given magnitude of the increase in the lagged marginal price, heavy electricity consumers could be more responsive to the price signal. 
 
 Tables \ref{Table:Robustness-Checks_Functional-Forms_1st-and-2nd-Order-Polynomial-Models} and \ref{Table:Robustness-Checks_Functional-Forms_3rd-and-4th-Order-Polynomial-Models} present the regression results from other specifications having different functional forms. As illustrated in Figure \ref{Figure:The-Impact-of-the-Change-in-the-MP-due-to-Surpassing-the-Lower-BUQ}, a linear regression function seems highly reasonable on both sides of the threshold, even for broader bandwidth. The robustness of the results from the first four columns in Table \ref{Table:Robustness-Checks_Functional-Forms_1st-and-2nd-Order-Polynomial-Models} confirms that the linear approximation of the regression line does not induce considerable biases in my RD estimates. In addition, the RD estimates in the two tables suggest that for wider bandwidths, adding higher-order polynomials of the running variables is still reasonable for the estimates to be precise.
@@ -10,5 +25,5 @@ Tables \ref{Table:Robustness-Checks_Functional-Forms_1st-and-2nd-Order-Polynomia
 \par \vspace{0.5cm}
 \noindent
 \textit{\textbf{Falsification Test}} ---
+\input{02_Chapter-1/00B_Tables/Table_Heterogeneity-in-Household-Responses_Per-season-Treatment-Effects.tex}
 Figure \ref{Figure:Robustness-Checks_Falsification-Tests} summarizes the results from falsification tests that examine treatment effects at two placebo cutoff points (i.e., at $-$30\% and 40\% of the normalized electricity consumption in Period 0 from the \textit{true} lower base usage quantity).\footnote{That is, the two false thresholds are at 70\% and 140\% of the normalized consumption in Period 0. Following the suggestion in \cite{Regression-Discontinuity-Designs_A-Guide-to-Practice_Imbens-and-Lemieux_2008}, I select those false cutoff points that are close to the median of the running variable on each side of the \textit{true} cutoff point.} In the falsification tests, I only use bandwidths less than the distance between a false threshold and the (actual) lower base usage quantity to avoid capturing some of the treatment effect. As clearly demonstrated, no estimate is different from zero at the 5\% level, suggesting that my RD design is valid. 
-

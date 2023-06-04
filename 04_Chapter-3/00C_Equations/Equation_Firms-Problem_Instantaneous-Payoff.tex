@@ -1,7 +1,11 @@
 \begin{equation}
 \begin{split}
-    \psi_{iak}(s_{ik}, p_{k}, g_{i}^{L}, a; \alpha^{H}, c) \
-    & = \ (1 - s_{ik}) \big[ \big\{ g_{i}^{L} \ + \ (1 - g_{i}^{L}) \alpha^{H} \big\} p_{k} \ - \ c \big] a.
+    \psi_{iak}(\boldsymbol{x}_{ik}, a; \boldsymbol{\theta}_{\psi}) \
+    & = \ 
+    \begin{cases}
+        \ \big\{ g_{i}^{L} \ + \ (1 - g_{i}^{L}) \alpha^{H} \big\} p_{k} \ - \ c \hspace{0.5cm} \text{if $s_{ik} = 0$ and $a = 1$} \\
+        \ 0 \hspace{4.65cm} \text{others},
+    \end{cases}
 \end{split}
 \label{Equation:Firms-Problem_Instantaneous-Payoff}
 \end{equation}

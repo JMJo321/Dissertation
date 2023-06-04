@@ -5,9 +5,9 @@
         \label{Table:Heterogeneity-in-Household-Responses:Treatment-Effect-by-Season}
         \vspace{0.3cm}
         \small
-        \begin{adjustbox}{scale = 0.77}
+        \begin{adjustbox}{scale = 0.74}
             \begin{threeparttable}
-                \begin{tabular}{@{\extracolsep{3pt}}lccccccccc}
+                \begin{tabular}{@{\extracolsep{0pt}}lccccccccc}
                     \\[-5.5ex]
                     \hline \hline
                     \\[-3.0ex]
@@ -41,7 +41,7 @@
                     Rate Code & RSCH & RSCH & RSCH & RSEH & RSEH & RSEH & RSGH & RSGH & RSGH \\ 
                     Season & All & Summer & Winter & All & Summer & Winter & All & Summer & Winter \\ 
                     Bandwidth & 10\% & 10\% & 10\% & 10\% & 10\% & 10\% & 10\% & 10\% & 10\% \\ 
-                    FEs: Billing-Year-by-Billing-Month & Yes & Yes & Yes & Yes & Yes & Yes & Yes & Yes & Yes \\ 
+                    FEs: Billing Year-by-Month & Yes & Yes & Yes & Yes & Yes & Yes & Yes & Yes & Yes \\ 
                     Observations & 130,757 & 35,948 & 46,731 & 306,775 & 106,231 & 102,522 & 1,941,332 & 575,228 & 695,162 \\ 
                     Adjusted R$^{2}$ & 0.535 & 0.414 & 0.259 & 0.571 & 0.418 & 0.301 & 0.486 & 0.540 & 0.167 \\
                     \\[-2.0ex]
@@ -50,7 +50,7 @@
                 \end{tabular}
                 \begin{tablenotes}[flushleft]
                     \footnotesize
-                    \item \textit{Note}: * $p < 0.1$, ** $p < 0.05$, and *** $p < 0.01$.
+                    \item \textit{Note}: This table shows how the treatment effect varies across seasons. I run three regressions for each of the three major residential rate plans (i.e., RSCH, RSEH, and RSGH). I utilize the observations from June through September for the summer season, whereas I use the observations from December through March for the winter season. The first columns for each rate plan report the regression results exploiting all available observations. Standard errors in parentheses are clustered at the household and billing year-by-month levels to allow correlations across households in a given month; * $p < 0.1$, ** $p < 0.05$, and *** $p < 0.01$.
                 \end{tablenotes}
             \end{threeparttable}
         \end{adjustbox}
