@@ -11,37 +11,33 @@ For a given well site that has not been developed, the firm makes a choice at ti
 Intuitively, the two alternatives are constrained. To be specific, the constraint depends on the value of $s_{t}$:
 \input{04_Chapter-3/00C_Equations/Equation_DCDP-Model_Constraints-of-Control-Variable.tex}
 
-The oil production from a horizontal well drilled at time $t$ is assumed to occur only during the very period:
+The oil production from a horizontal well drilled at time $t$ is assumed to occur only during the same period:
 \input{04_Chapter-3/00C_Equations/Equation_DCDP-Model_Oil-Production.tex}
-where $\alpha$ is the amount of oil produced from a well. For simplicity, it is also assumed that $\alpha$ is a constant across well locations.
+where $\alpha$ is the amount of oil produced from a well. For simplicity, it is also assumed that $\alpha$ is a constant across well locations. This formulation can certainly be modified to allow for production decline over time. However, we are interested in focusing on firms' investment and drilling decisions, so we abstract away from production declines. In an empirical exercise, account for the fact that a well produces for multiple periods by assuming that firms sell their production forward and receive the present value of revenue at the time they drill and complete the well. 
 
-The marginal drilling-associated costs at time $t$ are assumed to be uniform across well sites.\footnote{As in Section \ref{C3-SubSection:A-Limitation-of-AKS-style-Model}, we take the assumption of the negligible extraction costs.} We also assume linear marginal costs of drilling a horizontal well. That is, 
+We assume the linear cost of drilling a horizontal well. That is,
 \input{04_Chapter-3/00C_Equations/Equation_DCDP-Model_Cost.tex}
+For simplicity, we also assume that the drilling cost for the marginal well is uniform across well sites (i.e., $c_{0}$ and $c_{1}$ are the same for all well locations.).\footnote{As in Section \ref{C3-SubSection:A-Limitation-of-AKS-style-Model}, we take the assumption of the negligible extraction costs.} 
 
-The oil price at time $t$, denoted $p_{t}$, is another state variable in our model. Regarding oil prices, two different scenarios are possible in our model. If the oil production industry is small relative to the world oil market, then $p_{t}$ is the world price $\bar{p}$. In other words, $p_{t}$ is exogenous. In the endogenous-price scenario, the market clearing $p_{t}$ is determined from a linear inverse demand curve:
-\input{04_Chapter-3/00C_Equations/Equation_DCDP-Model_Oil-Prices.tex}
-where $Q_{t}$ is aggregate oil production, which will be described in detail later. 
+Let $R_{t}$ denote the remaining number of well sites at time $t$. In the AKS framework, $R_{t}$ is the remaining reserves. Therefore, the two can be equal but do not have to be. Without loss of generality, we fix the initial level of well sites to be 1 (i.e., $R_{0} = 1$).
 
-Let $R_{t}$ denote the remaining level of well sites at time $t$. Suppose its initial level is normalized to 1 (i.e., $R_{0} = 1$).
-
-For a given well location that has not been drilled before time $t$, the probability of drilling the well at time $t$ conditional on $s_{t}$ and $p_{t}$ can be defined as follows:
-\input{04_Chapter-3/00C_Equations/Equation_DCDP-Model_Definition-of-CCP.tex}
-
-Intuitively, aggregate drilling at time $t$ can be expressed with $R_{t}$ and $Pr_{t}$ as follows:
+Intuitively, the aggregate drilling at time $t$ can be defined as a function of the remaining level of well sites at time $t$ and the probability of drilling a given well location that has not been drilled yet at time $t$:
 \input{04_Chapter-3/00C_Equations/Equation_DCDP-Model_Aggregate-Drilling.tex}
 From this definition, the evolution path of the remaining well sites is governed by the following relationship:
 \input{04_Chapter-3/00C_Equations/Equation_DCDP-Model_Reserve.tex}
 In addition, due to the assumption that $\alpha$ is uniform across well sites, the aggregate oil production $Q_{t}$ is proportional to $D_{t}$:
 \input{04_Chapter-3/00C_Equations/Equation_DCDP-Model_Aggregate-Oil-Production.tex}
 
-The utility obtained from an individual well site can be represented by exploiting an additively separable utility function:
+The utility obtained from an individual well site can be represented by exploiting an additively separable utility function\footnote{Intuitively, this definition can be understood to mean that the drilling of a well site and the production of oil from the site occur together at time $t$. See the description of $q_{t}$ for further details.}:
 \input{04_Chapter-3/00C_Equations/Equation_DCDP-Model_Utility-Function.tex}
-Here, we assume that drilling a well and oil production from the well co-occur at time $t$. 
+where $u(\cdot)$ represents the instantaneous utility obtained from the consumption of oils. Here, we normalize $u(0) = 0$.
 
 In the utility function, $\epsilon(a_{t})$, a component of the utility of an alternative $a$ at time $t$, is an idiosyncratic cost shock at time $t$.\footnote{We can regard $\epsilon(a_{t})$ as an element of the unobservable state vector $\epsilon_{t}$. In our case, $\epsilon_{t} = ( \epsilon_{0, t}, \ \epsilon_{1, t} )$.} In our context, $\epsilon(a_{t})$, which relies on the firm's choice, can be perceived as a composite cost element that affects the firm's decision at time $t$ between drilling today and drilling in the future and that varies over time. For example, $\epsilon(a_{t})$ could include capacity-constraint-induced costs, whose value varies with $a_{t}$. With the interpretation of $\epsilon(a_{t})$, it is not required to specifically model a set of constraints at time $t$ in our framework. 
 
-Definitely, $\epsilon(a_{t})$ drives the firm's drilling decision at time $t$. Because the choice-specific cost shock is observable only by the firm, without $\epsilon(a_{t})$, the (observable) state variables cannot perfectly explain the firm's drilling decision at time $t$ in our model. Intuitively, when the firm decides whether to drill a well into a given well site or not at time $t$, $a_{t} = 0$ will be the optimal choice if the expected value of the utility function conditional on $a_{t} = 0$ is greater than or equal to that conditional on $a_{t} = 1$. Mathematically, 
+Definitely, $\epsilon(a_{t})$ drives the firm's drilling decision at time $t$. Because the choice-specific cost shock is observable only by the firm, without $\epsilon(a_{t})$, the (observable) state variable cannot perfectly explain the firm's drilling decision at time $t$ in our model. Intuitively, when the firm decides whether to drill a well into a given well site or not at time $t$, $a_{t} = 0$ will be the optimal choice if the value of the utility function conditional on $a_{t} = 0$ is greater than or equal to that conditional on $a_{t} = 1$. Mathematically, 
 \input{04_Chapter-3/00C_Equations/Equation_DCDP-Model_Decision-Rule.tex}
-where $e(a_{t})$ is the expected value of $\epsilon(a_{t})$ conditional on the chosen alternative $a_{t}$ (i.e., $E \left[ \epsilon(a_{t}) \ | \ a_{t} \right]$). The decision rule implies that the magnitude of $e(0) - e(1)$ determines the optimal choice. If $\epsilon(a_{t})$ follow the Type 1 Extreme Value (T1EV) distribution with the location parameter 0 and the scale parameter $\sigma$ and are I.I.D., then $e(a_{t})$ is given as follows\footnote{See \cite{Euler-Equations-for-the-Estimation-of-Dynamic-Discrete-Choice-Structural-Models_Aguirregabiria-and-Magesan_2013}.}:
+The decision rule implies that the magnitude of $\epsilon_{0, t} - \epsilon_{1, t}$ determines the optimal choice. 
+
+Since $\epsilon(a_{t})$ is not observable, utilizing the decision rule directly is infeasible. However, according to \cite{Euler-Equations-for-the-Estimation-of-Dynamic-Discrete-Choice-Structural-Models_Aguirregabiria-and-Magesan_2013}, the expected value of $\epsilon(a_{t})$ conditional on alternative $a_{t}$ being chosen under the decision rule can be expressed with $Pr_{t}$. To be specific, when $a_{t} = 1$, the conditional expected value of $\epsilon_{1}$, denoted $e_{1}$, is given as follows\footnote{In other words, $e(a_{t})$ indicate the mean of the cost shock conditional on choice $a_{t}$.}:
 \input{04_Chapter-3/00C_Equations/Equation_DCDP-Model_Expected-Value-of-Epsilon.tex}
-Here, $\gamma$ and $CCP(a_{t})$ are Euler's constant and the probability of choosing $a_{t}$ conditional on states at time $t$, respectively. For example, when $a_{t} = 1$, the cost shock's expected value is $\sigma \left( \gamma \ - \ \ln (Pr_{t}) \right)$. 
+Here, $\gamma$ is Euler's constant. And it is assumed that $\epsilon(a_{t})$ follow the Type 1 Extreme Value (T1EV) distribution with the location parameter 0 and the scale parameter $\sigma$ and are independently and identically distributed. The expected value allows our analytical as well as empirical analysis of fracking firms' drilling decisions to be tractable without observing $\epsilon(a_{t})$. 

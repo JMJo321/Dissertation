@@ -1,5 +1,31 @@
-The Implicit Function Theorem (IFT) allows us to predict the impact of sudden demand shocks on the equilibrium paths for drilling and production. Applying the IFT to equation (\ref{Equation:Firms-Problem_Euler-Equation}) yields
+\afterpage{
+    \begin{figure}[t!]
+        \centering
+        \includegraphics[scale = 0.15]{04_Chapter-3/00A_Figures/Figure_Equlibrium-Paths_Endogenous-Price.png}
+        \caption{Equilibrium Paths under Unexpected Demand Shocks}
+        \caption*{
+            {\small
+            \textit{Note}: 
+            This figure shows the equilibrium paths of drilling probability, drilling, and the remaining well sites, which are obtained from a simulation for two unanticipated demand shocks. For these simulation results, we assume the identical parameter values and cost function utilized to draw the phase diagrams in Figure \ref{Figure:Phase-Diagram_Saddle-Point}.
+        }}
+        \label{Figure:Equilibrium-Paths-under-Unexpected-Demand-Shocks}
+    \end{figure}
+}
+The Implicit Function Theorem (IFT) allows us to predict the impact of sudden demand shocks on the equilibrium paths for drilling and production. Applying the IFT to equation (\ref{Equation:Firms-Problem_Euler-Equation}) (i.e., the Euler equation of the firm's problem) yields
 \input{04_Chapter-3/00C_Equations/Equation_Equilibrium-Paths_Applying-IFT.tex}
-This equation suggests that an unexpected positive price shock will lead to a higher drilling rate if the cost-shock-induced incremental gains from drilling are better than those from waiting. 
+This resulting equation suggests that an unexpected positive price shock will lead to a higher drilling rate if the cost-shock-induced incremental gains from drilling are larger than those from waiting (i.e., $\partial \psi_{i1k}/\partial p_{k} - (1/\rho)(\partial f_{ik}/\partial p_{k}) > 0$).\footnote{If $Pr_{k} \in (0, 1)$, every term in the curly bracket is always positive.}
+\afterpage{
+    \begin{figure}[t!]
+        \centering
+        \includegraphics[scale = 0.11]{04_Chapter-3/00A_Figures/Figure_Impact-of-Demand-Shocks-on-Drilling-of-Well-Sites-with-Heterogeneous-Quality}
+        \caption{Heterogeneous Impacts of Unexpected Demand Shocks on Drilling and Production}
+        \caption*{
+            {\small
+            \textit{Note}: 
+            This figure demonstrates how the firm's drilling activity at well sites of heterogeneous quality responds to unexpected demand shocks. As shown in the first panel, the drilling probability of low-quality well sites shows a higher sensitivity to the first negative demand shock. The second panel demonstrates that although the drilling probability of low-quality well locations more sensitively responds to the second positive demand shock, the probability is still lower than that of high-quality well sites. The third panel illustrates the impacts of the demand shocks on oil extraction productivity. Clearly, the first negative shock discontinuously increases per-drilling oil production due to the high sensitivity of low-quality location drilling. To the second positive demand shock, the per-drilling production showed the opposite reaction. For this simulation, we assume that a dispersion parameter of $\sigma = 1$, an interest rate of $r = 0.05$, an initial number of well sites of $R_{0}^{g} = 1$, additional well sites of $E^{g} = 0$, where $g \in \{ L, H \}$. Also, it is assumed that a flow payoff function of $f(p_{k}) = 20 - 0.5p_{t}$ and that an instantaneous payoff function of $\psi_{iak} (p_{k}, a) = [\{ g_{i}^{L} + 1.5(1 - g_{i}^{L}) \} p_{k} - 2]a$. 
+        }}
+        \label{Figure:Heterogeneous-Impacts-of-Unexpected-Price-Shocks-on-Equilibrium-Paths}
+    \end{figure}
+}
 
-Figure \ref{Figure:Equilibrium-Paths-under-Unexpected-Price-Shocks} depicts how the paths of drilling probability, drilling, reserves, and oil price respond to two unanticipated demand shocks.\footnote{Given parameter values utilized for this simulation, the condition for the positive relationship between drilling probability and unexpected price shocks in (\ref{Equation:Equilibrium-Paths_Applying-IFT}) (i.e., $\partial \psi_{i1k} / \partial p_{k} - (1/\rho)(\partial f_{ik} / \partial p_{k}) > 0$) holds.} The first negative demand shock causes drilling probability discontinuously decreases. Due to the reduction in drilling probability, drilling demonstrates a discontinuous decrease too. Moreover, the negative demand shock also reduces the depletion rate of the reserves. As shown in the last panel in the figure, the oil price jumps down on impact after the negative demand shock, then gradually rises.\footnote{Drilling, and thus production, rapidly diminishes for a while after $t = 0$. Then, its rate of change gradually decreases, and drilling eventually converges to a lower bound. In other words, the time path of drilling has a convex profile. Because equation (\ref{Equation:DCDP-Model_Oil-Prices}) determines the oil price at time $t$, the time path for the endogenous oil price is a concave curve.} The later positive demand shock induces the opposite reactions in the equilibrium paths. 
+Figure \ref{Figure:Equilibrium-Paths-under-Unexpected-Demand-Shocks} depicts how the paths of drilling probability, drilling, reserves, and oil price respond to two unanticipated demand shocks.\footnote{Given parameter values utilized for this simulation, the condition for the positive relationship between drilling probability and unexpected price shocks in (\ref{Equation:Equilibrium-Paths_Applying-IFT}) (i.e., $\partial \psi_{i1k} / \partial p_{k} - (1/\rho)(\partial f_{ik} / \partial p_{k}) > 0$) holds.} The first negative demand shock causes drilling probability discontinuously decreases. Due to the reduction in drilling probability, drilling demonstrates a discontinuous decrease too. Moreover, the negative demand shock also reduces the depletion rate of the remaining well locations. As shown in the last panel in the figure, the oil price jumps down on impact after the negative demand shock, then gradually rises.\footnote{Drilling, and thus production, rapidly diminishes for a while after $t = 0$. Then, its rate of change gradually decreases, and drilling eventually converges to a lower bound. In other words, the time path of drilling has a convex profile. Because equation (\ref{Equation:Firms-Problem_Oil-Prices}) determines the oil price at time $t$, the time path for the endogenous oil price is a concave curve.} The later positive demand shock induces the opposite reactions in the equilibrium paths. 
