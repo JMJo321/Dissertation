@@ -1,0 +1,51 @@
+%\afterpage{
+    \begin{table}[h!]
+        \centering
+        \caption{Hourly Average Treatment Effects in and near the Peak Rate Period}
+        \label{Table:Hourly-Average-Treatment-Effects-in-and-near-the-Peak-Rate-Period}
+        \vspace{0.1cm}
+        \small
+        \begin{adjustbox}{scale = 0.75}
+            \begin{threeparttable}
+                \begin{tabular}{@{\extracolsep{3pt}}lccccccc}
+                    \\[-5.5ex]
+                    \hline \hline
+                    \\[-3.0ex]
+%                    & \multicolumn{15}{c}{Dependent Variable} \\
+%                    \\[-3.0ex]
+%                    \cline{2-16}
+%                    \\[-3.0ex]
+                    & \multicolumn{7}{c}{Hourly Electricity Consumption  (kWh/Hour)} \\
+                    \\[-3.0ex]
+                    & (1) & (2) & (3) & (4) & (5) & (6) & (7) \\
+                    \\[-3.0ex]
+                    \hline
+                    \\[-2.0ex]
+                    $\mathbb{1}$[Treatment \& Post] & $-$0.125$^{***}$ & $-$0.161$^{***}$ & $-$0.119$^{***}$ & $-$0.249$^{***}$ & $-$0.032$^{***}$ & $-$0.143$^{***}$ & $-$0.058$^{***}$ \\
+                    & (0.020) & (0.036) & (0.022) & (0.044) & (0.011) & (0.015) & (0.015) \\
+                    & [$-$0.165, $-$0.085] & [$-$0.231, $-$0.090] & [$-$0.163, $-$0.076] & [$-$0.336, $-$0.163] & [$-$0.055, $-$0.010] & [$-$0.173, $-$0.114] & [$-$0.087, $-$0.029] \\
+                    & & & & & & & \\
+                    \hline
+                    \\[-2.0ex]
+                    Description of Period & Peak & Peak & Peak & Peak & Pre-Peak & Peak & Post-Peak \\
+                    Period of Hours & 17 to 18 & 17 to 18 & 17 to 18 & 17 to 18 & 15 to 16 & 17 to 18 & 19 to 20 \\
+                    Tariff Group & A & B & C & D & All & All & All \\
+                    Price Change in the Peak Rate Period & +6 & +12 & +18 & +24 & [-] & [-] & [-] \\
+                    FEs: Household by Half-Hourly Time Window & Yes & Yes & Yes & Yes & Yes & Yes & Yes \\
+                    FEs: Day of Week by Half-Hourly Time Window & Yes & Yes & Yes & Yes & Yes & Yes & Yes \\
+                    FEs: Month of Year & Yes & Yes & Yes & Yes & Yes & Yes & Yes \\
+                    Observations & 506,540 & 326,800 & 511,700 & 331,960 & 1,006,200 & 1,006,200 & 1,006,200 \\
+                    Adjusted R$^{2}$ & 0.384 & 0.397 & 0.383 & 0.367 & 0.308 & 0.379 & 0.372 \\
+                    \\[-2.0ex]
+                    \hline \hline
+                    \\[-4.5ex]
+                \end{tabular}
+                \begin{tablenotes}[flushleft]
+                    \footnotesize
+%                    \item
+                    \item \textit{Note}: This table shows the results of the regression in Equation (\ref{Eq:Model-Specification_Hourly-Average-Treatment-Effects}). The first four columns demonstrate the result for each of the four tariff groups in the peak rate period. The last three columns provide the result of all four tariff groups for each of the three periods. Standard errors in parentheses are clustered at the household and day of experiment levels to correct for serial correlation. The ranges in brackets are the 95\% confidence intervals; * $p < 0.1$, ** $p < 0.05$, and *** $p < 0.01$.
+                \end{tablenotes}
+            \end{threeparttable}
+        \end{adjustbox}
+    \end{table}
+%}

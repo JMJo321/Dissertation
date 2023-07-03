@@ -1,0 +1,55 @@
+%\afterpage{
+    \begin{table}[t!]
+        \centering
+        \caption{Breakdown of Hourly Average Treatment Effects}
+        \label{Table:Breakdown-of-Hourly-ATEs}
+        \vspace{0.3cm}
+        \small
+        \begin{adjustbox}{scale = 0.83}
+            \begin{threeparttable}
+                \begin{tabular}{@{\extracolsep{20pt}}lccccccc}
+                    \\[-5.5ex]
+                    \hline \hline
+                    \\[-3.0ex]
+%                    & \multicolumn{15}{c}{Dependent Variable} \\
+%                    \\[-3.0ex]
+%                    \cline{2-100}
+%                    \\[-3.0ex]
+                    & \multicolumn{7}{c}{Hourly Electricity Consumption  (kWh/Hour)} \\
+                    \\[-3.0ex]
+                    & (1) & (2) & (3) & (4) & (5) & (6) & (7) \\
+                    \\[-3.0ex]
+                    \hline
+                    \\[-2.0ex]
+                    $\mathbb{1}$[Treatment \& Post] & $-$0.017 & $-$0.092$^{***}$ & $-$0.022 & $-$0.057$^{*}$ & $-$0.127$^{***}$ & $-$0.078$^{**}$ & $-$0.189$^{***}$ \\
+                    & (0.020) & (0.025) & (0.024) & (0.030) & (0.039) & (0.031) & (0.041) \\
+                    & & & & & & & \\
+                    $\mathbb{1}$[Treatment \& Post] $\times$ HDDs & 0.00005 & $-$0.007$^{**}$ & $-$0.002 & $-$0.010$^{***}$ & $-$0.002 & $-$0.004 & $-$0.009 \\
+                    & (0.003) & (0.003) & (0.003) & (0.004) & (0.005) & (0.003) & (0.006) \\
+                    & & & & & & & \\
+                    $\mathbb{1}$[Treatment \& Post] $\times$ HDDs$^{*}$ & $-$0.002 & 0.008$^{***}$ & 0.006$^{*}$ & 0.013$^{***}$ & 0.003 & 0.005 & 0.011$^{*}$ \\
+                    & (0.003) & (0.003) & (0.003) & (0.005) & (0.006) & (0.003) & (0.006) \\
+                    & & & & & & & \\
+                    \hline
+                    \\[-2.0ex]
+                    Description of Period & Pre-Peak & Peak & Post-Peak & Peak & Peak & Peak & Peak \\
+                    Period of Hours & 15 to 16 & 17 to 18 & 19 to 20 & 17 to 18 & 17 to 18 & 17 to 18 & 17 to 18 \\
+                    Tariff Group & All & All & All & A & B & C & D \\
+                    Price Change in the Peak Rate Period & [-] & [-] & [-] & +6 & +12 & +18 & +24 \\
+                    Knot & 10 & 10 & 10 & 10 & 10 & 10 & 10 \\
+                    FEs: Day of Week by Half-Hourly Time Window & Yes & Yes & Yes & Yes & Yes & Yes & Yes \\
+                    Observations & 1,006,200 & 1,006,200 & 1,006,200 & 506,540 & 326,800 & 511,700 & 331,960 \\
+                    Adjusted R$^{2}$ & 0.024 & 0.047 & 0.040 & 0.046 & 0.044 & 0.044 & 0.045 \\
+                    \\[-2.0ex]
+                    \hline \hline
+                    \\[-4.5ex]
+                \end{tabular}
+                \begin{tablenotes}[flushleft]
+                    \footnotesize
+%                    \item
+                    \item \textit{Note}: This table shows the results of the regression in Equation (\ref{Eq:Model-Specification_Breakdown-of-Hourly-Average-Treatment-Effect}). Only coefficients of interest are presented in the table. See Table \ref{Table:Breakdown-of-Hourly-ATEs_For-Appendix} to look at the full results. The first three columns provide the result of all four tariff groups for each of the three periods. The last four columns demonstrate the result for each of the four tariff groups in the peak rate period. Standard errors in parentheses are clustered at the household and day of experiment levels to correct for serial correlation; * $p < 0.1$, ** $p < 0.05$, and *** $p < 0.01$.
+                \end{tablenotes}
+            \end{threeparttable}
+        \end{adjustbox}
+    \end{table}
+%}

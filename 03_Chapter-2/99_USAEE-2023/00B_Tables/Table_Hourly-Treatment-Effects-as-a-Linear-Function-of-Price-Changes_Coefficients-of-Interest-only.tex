@@ -1,0 +1,62 @@
+\afterpage{
+    \begin{table}[t!]
+        \centering
+        \caption{Hourly Treatment Effects as a Linear Function of Peak-rate-period Price Changes}
+        \label{Table:Hourly-ATEs-as-a-Linear-Function-of-Peak-Rate-Period-Price-Changes_Coefficients-of-Interest-only}
+        \vspace{0.3cm}
+        \small
+        \begin{adjustbox}{scale = 0.8}
+            \begin{threeparttable}
+                \begin{tabular}{@{\extracolsep{40pt}}lccc}
+                    \\[-5.5ex]
+                    \hline \hline
+                    \\[-3.0ex]
+%                    & \multicolumn{15}{c}{Dependent Variable} \\
+%                    \\[-3.0ex]
+%                    \cline{2-100}
+%                    \\[-3.0ex]
+                    & \multicolumn{3}{c}{Hourly Electricity Consumption  (kWh/Hour)} \\
+                    \\[-3.0ex]
+                    & (1) & (2) & (3) \\
+                    \\[-3.0ex]
+                    \hline
+                    \\[-2.0ex]
+                    $\mathbb{1}$[Treatment \& Post] & $-$0.045 & $-$0.028 & $-$0.053 \\
+                    & (0.029) & (0.035) & (0.035) \\
+                    & & & \\
+                    $\mathbb{1}$[Treatment \& Post] $\times$ $\Delta$PC & 0.002 & $-$0.005$^{**}$ & 0.002 \\
+                    & (0.002) & (0.002) & (0.002) \\
+                    & & & \\
+                    $\mathbb{1}$[Treatment \& Post] $\times$ HDDs & $-$0.0001 & $-$0.010$^{**}$ & $-$0.001 \\
+                    & (0.004) & (0.004) & (0.004) \\
+                    & & & \\
+                    $\mathbb{1}$[Treatment \& Post] $\times$ HDDs$^{*}$ & 0.001 & 0.012$^{**}$ & 0.005 \\
+                    & (0.005) & (0.006) & (0.005) \\
+                    & & & \\
+                    $\mathbb{1}$[Treatment \& Post] $\times$ HDDs $\times$ $\Delta$PC & 0.00001 & 0.0002 & $-$0.0001 \\
+                    & (0.0002) & (0.0002) & (0.0003) \\
+                    & & & \\
+                    $\mathbb{1}$[Treatment \& Post] $\times$ HDDs$^{*}$ $\times$ $\Delta$PC & $-$0.0002 & $-$0.0003 & 0.00004 \\
+                    & (0.0003) & (0.0003) & (0.0003) \\
+                    & & & \\
+                    \hline
+                    \\[-2.0ex]
+                    Description of Period & Pre-Peak & Peak & Post-Peak \\
+                    Period of Hours & 15 to 16 & 17 to 18 & 19 to 20 \\
+                    Knot & 10 & 10 & 10 \\
+                    FEs: Day of Week by Half-Hourly Time Window & Yes & Yes & Yes \\
+                    Observations & 1,006,200 & 1,006,200 & 1,006,200 \\
+                    Adjusted R$^{2}$ & 0.024 & 0.047 & 0.040 \\
+                    \\[-2.0ex]
+                    \hline \hline
+                    \\[-4.5ex]
+                \end{tabular}
+                \begin{tablenotes}[flushleft]
+                    \footnotesize
+%                    \item
+                    \item \textit{Note}: This table shows the results of the regression in Equation (\ref{Eq:Model-Specification_Breakdown-of-Hourly-Average-Treatment-Effect-as-a-Linear-Function-of-Price-Changes}). Only coefficients of interest are presented in the table. See Table \ref{Table:Hourly-ATEs-as-a-Linear-Function-of-Peak-Rate-Period-Price-Changes_For-Appendix} to look at the full results. Standard errors in parentheses are clustered at the household and day of experiment levels to correct for serial correlation; * $p < 0.1$, ** $p < 0.05$, and *** $p < 0.01$.
+                \end{tablenotes}
+            \end{threeparttable}
+        \end{adjustbox}
+    \end{table}
+}
