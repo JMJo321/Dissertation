@@ -2,13 +2,15 @@
 \begin{split}
     % \left( \rho \ + \ \sum_{\ell \neq k} \lambda_{k\ell} \ + \ \lambda_{d} \right) V_{ik} \ 
     % & = \ f_{ik} \ + \ \sum_{\ell \neq k} \lambda_{k\ell} V_{i\ell} \ + \ \lambda_{d} E\bigg[ \underset{a}{\max} \left\{ V_{i,\ell(i, a, k)} \ + \ \psi_{iak} \ + \ \epsilon_{iak} \right\} \bigg].
-    V_{ik} \ 
-    & = 
-    \ \frac{
-        \ f_{ik} \ + \ \sum_{\ell \neq k} \lambda_{k\ell} V_{i\ell} \ + \ \lambda_{a} E\Big[ \underset{a \in \mathcal{A}}{\max} \left\{ V_{i,\ell(i, a, k)} \ + \ \psi_{iak} \ + \ \epsilon_{iak} \right\} \Big] \ 
-    }{
-        \rho \ + \ \sum_{\ell \neq k} \lambda_{k\ell} \ + \ \lambda_{a}
-    }.
+%    V_{ik} \ 
+%    & = 
+%    \ \frac{
+%        \ f_{ik} \ + \ \sum_{\ell \neq k} \lambda_{k\ell} V_{i\ell} \ + \ \lambda_{a} E\Big[ \underset{a \in \mathcal{A}}{\max} \left\{ V_{i,\ell(i, a, k)} \ + \ \psi_{iak} \ + \ \epsilon_{iak} \right\} \Big] \ 
+%    }{
+%        \rho \ + \ \sum_{\ell \neq k} \lambda_{k\ell} \ + \ \lambda_{a}
+%    }.
+    & -\dot{V}_{ik} (t) \ + \ \left( \rho \ + \ \lambda_{a} \ + \ \sum_{\ell \neq k} \lambda_{k\ell} \right) V_{ik}(t) \\
+    & \hspace{1.0cm} = \ (f_{ik} \ + \ \lambda_{a} \tilde{f}_{ik}) \ + \ \lambda_{a} E\Big[ \underset{a \in \mathcal{A}}{\max} \left\{ V_{i,\ell(i, a, k)} (t) \ + \ \psi_{iak} \ + \ \tilde{\psi}_{iak} \ + \ \epsilon_{iak} \right\} \Big] \ + \ \sum_{\ell \neq k} \lambda_{k\ell} V_{i\ell}(t)
 \end{split}
 \label{Equation:Firms-Problem_Value-Function}
 \end{equation}

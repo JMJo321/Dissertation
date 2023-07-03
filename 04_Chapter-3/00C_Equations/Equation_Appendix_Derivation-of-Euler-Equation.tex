@@ -1,26 +1,41 @@
-Necessary condition (\ref{Equation:Firms-Problem_Necessary-Conditions_Drilling-Probability}) leads to the following when $R_{t}^{g} > 0$ and $Pr_{t}^{g} \in (0, 1)$:
+The assumption of constant oil price implies no change in state. In other words, the assumption suggests the following conditions:
+\begin{itemize}
+    \item
+    $V_{ik}(t) \ = \ 0$;
+    
+    \item
+    for all $\ell$, $\lambda_{k\ell} = 0$;
+    
+    \item
+    $\tilde{f}_{ik} = 0$; and
+    
+    \item
+    $\tilde{\psi}_{iak} = 0$.
+    
+\end{itemize}
+
+Using those conditions, the firm's value function, which is presented in equation (\ref{Equation:Firms-Problem_Value-Function}), is simplified as follows:
 \begin{equation*}
 \begin{split}
-    \pi_{t}^{g} \
-    & = \ \psi_{t}^{g} \ + \ \sigma (\gamma - \ln(Pr_{t}^{g})) \ - \ \sigma (\gamma - \ln(1 - Pr_{t}^{g})).
+    (\rho \ + \ \lambda_{a}) V_{ik}(t) \
+    & = \ f_{ik} \ + \ \lambda_{a} E\Big[ \underset{a \in \mathcal{A}}{\max} \left\{ V_{i,\ell(i, a, k)} (t) \ + \ \psi_{iak} \ + \ \epsilon_{iak} \right\} \Big]
 \end{split}
 \end{equation*}
-Under the same conditions, necessary condition (\ref{Equation:Firms-Problem_Necessary-Conditions_Costate-Variable}) is
+In addition, equation (\ref{Equation:Firms-Problem_Emax}) allows yielding the even more simple functional form of the firm's value function. When $a = 0$,
 \begin{equation*}
 \begin{split}
-    \dot{\pi}_{t}^{g} \ 
-    & = \ \rho \pi_{t}^{g} \ - \ \big\{ f_{t}^{g} \ + \ \lambda_{a} \sigma \big( \gamma \ - \ \ln(1 - Pr_{t}^{g}) \big) \big\}.
+    V_{ik} (t) \
+    & = \ \frac{ \ f_{ik} \ + \ \lambda_{a} \sigma \big( \gamma \ - \ \ln(1 - Pr_{k}) \big) \ }{\rho}.
 \end{split}
 \end{equation*}
-Under the assumption that there is no exogenous price change, there is no state transition before the following decision time. Therefore, taking time derivative to the first equation yields
+In the case of $a = 1$,
 \begin{equation*}
 \begin{split}
-    \dot{\pi}_{t}^{g} \ 
-    % & = \ \dot{\psi}_{t}^{g} \ - \ \sigma \left( \frac{1}{Pr_{t}^{g}} \ + \ \frac{1}{1 - Pr_{t}^{g}} \right) \dot{Pr}_{t}^{g} \\
-    & = \ 0.
+    V_{ik} (t) \
+    & = \ \frac{ \ f_{ik} \ + \ \lambda_{a} \left\{ \psi_{i1k} \ + \ \sigma \big( \gamma \ - \ \ln(Pr_{k}) \big) \right\} \ }{\rho \ + \ \lambda_{a}}.
 \end{split}
 \end{equation*}
-Due to $\dot{\pi}_{t}^{g} = 0$, substituting the first equation into the second one, with soem algebra, allows us having the Euler equation:
+Equating the two equations, with some algebra, allows us having the Euler equation:
 \begin{equation*}
 \begin{split}
     \frac{ \ f_{ik} \ + \ \lambda_{a} \sigma \big( \gamma \ - \ \ln(1 - Pr_{k}) \big) \ }{\rho} \
