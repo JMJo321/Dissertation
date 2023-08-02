@@ -1,0 +1,13 @@
+\begin{align}
+\small
+\begin{split}
+    kWh_{ith} \ 
+    & = \ \beta_{1} HDD_{t} \ + \ \beta_{2} HDD_{t}^{*} \\
+    & \hspace{0.7cm} + \ \left( \beta_{3} \ + \ \beta_{4} HDD_{t} \ + \ \beta_{5} HDD_{t}^{*} \right) \mathds{1}[\text{Treatment}]_{i} \\
+    & \hspace{0.7cm} + \ \left( \beta_{6} \ + \ \beta_{7} HDD_{t} \ + \ \beta_{8} HDD_{t}^{*} \right) \mathds{1}[\text{Treatment}]_{i} \Delta PC_{i} \\
+    & \hspace{0.7cm} + \ \left( \beta_{9} \ + \ \beta_{10} HDD_{t} \ + \ \beta_{11} HDD_{t}^{*} \right) \mathds{1}[\text{Post}]_{t} \\
+    & \hspace{0.7cm} + \ \left( \beta_{12} \ + \ \beta_{13} HDD_{t} \ + \ \beta_{14} HDD_{t}^{*} \right) \mathds{1}[\text{Treatment \& Post}]_{it} \\
+    & \hspace{0.7cm} + \ \left( \beta_{15} \ + \ \beta_{16} HDD_{t} \ + \ \beta_{17} HDD_{t}^{*} \right) \mathds{1}[\text{Treatment \& Post}]_{i} \Delta PC_{i} \ + \ \kappa_{dw} \ + \ \epsilon_{ith}
+\end{split}
+\label{Eq:Model-Specification_Breakdown-of-Hourly-Average-Treatment-Effect-as-a-Linear-Function-of-Price-Changes}
+\end{align}

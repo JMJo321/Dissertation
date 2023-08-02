@@ -1,44 +1,50 @@
-The assumption of constant oil price implies no change in state. In other words, the assumption suggests the following conditions:
-\begin{itemize}
-    \item
-    $V_{ik}(t) \ = \ 0$;
-    
-    \item
-    for all $\ell$, $\lambda_{k\ell} = 0$;
-    
-    \item
-    $\tilde{f}_{ik} = 0$; and
-    
-    \item
-    $\tilde{\psi}_{iak} = 0$.
-    
-\end{itemize}
-
-Using those conditions, the firm's value function, which is presented in equation (\ref{Equation:Firms-Problem_Value-Function}), is simplified as follows:
+The assumption of no exogenous demand shock suggests that $\lambda_{k\ell} = 0$, for all $\ell$. 
+%\begin{itemize}
+%    \item
+%    $V_{ik}(t) \ = \ 0$;
+%    
+%    \item
+%    for all $\ell$, $\lambda_{k\ell} = 0$;
+%    
+%    \item
+%    $\tilde{f}_{ik} = 0$; and
+%    
+%    \item
+%    $\tilde{\psi}_{iak} = 0$.
+%    
+%\end{itemize}
+Under this assumption, the firm's value function, which is presented in equation (\ref{Equation:Firms-Problem_Value-Function}), is simplified as follows:
 \begin{equation*}
 \begin{split}
-    (\rho \ + \ \lambda_{a}) V_{ik}(t) \
-    & = \ f_{ik} \ + \ \lambda_{a} E\Big[ \underset{a \in \mathcal{A}}{\max} \left\{ V_{i,\ell(i, a, k)} (t) \ + \ \psi_{iak} \ + \ \epsilon_{iak} \right\} \Big]
+    -\dot{V}_{ik} (t) \ + \ (\rho \ + \ \lambda_{a}) V_{ik}(t) \
+    & = \ f_{ik} \ + \ \lambda_{a} E\Big[ \underset{a \in \mathcal{A}}{\max} \left\{ V_{ik} (t) \ + \ \psi_{iak} \ + \ \epsilon_{iak} \right\} \Big]
 \end{split}
 \end{equation*}
-In addition, equation (\ref{Equation:Firms-Problem_Emax}) allows yielding the even more simple functional form of the firm's value function. When $a = 0$,
+In addition, equation (\ref{Equation:Firms-Problem_Emax}) allows yielding the even simpler functional form of the firm's value function. When $a = 0$,
 \begin{equation*}
 \begin{split}
     V_{ik} (t) \
-    & = \ \frac{ \ f_{ik} \ + \ \lambda_{a} \sigma \big( \gamma \ - \ \ln(1 - Pr_{k}) \big) \ }{\rho}.
+    & = \ \frac{ \ \dot{V}_{ik} (t) \ + \ f_{ik} \ + \ \lambda_{a} \sigma \big( \gamma \ - \ \ln(1 - Pr_{k}) \big) \ }{\rho}.
 \end{split}
 \end{equation*}
 In the case of $a = 1$,
 \begin{equation*}
 \begin{split}
     V_{ik} (t) \
-    & = \ \frac{ \ f_{ik} \ + \ \lambda_{a} \left\{ \psi_{i1k} \ + \ \sigma \big( \gamma \ - \ \ln(Pr_{k}) \big) \right\} \ }{\rho \ + \ \lambda_{a}}.
+    & = \ \frac{ \ \dot{V}_{ik} (t) \ + \ f_{ik} \ + \ \lambda_{a} \left\{ \psi_{i1k} \ + \ \sigma \big( \gamma \ - \ \ln(Pr_{k}) \big) \right\} \ }{\rho \ + \ \lambda_{a}}.
 \end{split}
 \end{equation*}
 Equating the two equations, with some algebra, allows us having the Euler equation:
 \begin{equation*}
 \begin{split}
-    \frac{ \ f_{ik} \ + \ \lambda_{a} \sigma \big( \gamma \ - \ \ln(1 - Pr_{k}) \big) \ }{\rho} \
-    & = \ \left\{ \psi_{i1k} \ + \ \sigma \big( \gamma \ - \ \ln(Pr_{k}) \big) \right\} \ - \ \sigma \big( \gamma \ - \ \ln(1 - Pr_{k}) \big).
+    \frac{ \ \dot{V}_{ik} (t) \ + \ f_{ik} \ + \ \lambda_{a} \sigma \big( \gamma \ - \ \ln(1 - Pr_{k}) \big) \ }{\rho} \
+    & = \ \psi_{i1k} \ + \ \sigma \big( \gamma \ - \ \ln(Pr_{k}) \big) \ - \ \sigma \big( \gamma \ - \ \ln(1 - Pr_{k}) \big).
+\end{split}
+\end{equation*}
+Similarly, $V_{ik} (t)$ can be expressed without $\dot{V}_{ik} (t)$ as follows:
+\begin{equation*}
+\begin{split}
+    V_{ik} (t) \
+    & = \ \psi_{i1k} \ + \ \sigma \big( \gamma \ - \ \ln(Pr_{k}) \big) \ - \ \sigma \big( \gamma \ - \ \ln(1 - Pr_{k}) \big).
 \end{split}
 \end{equation*}

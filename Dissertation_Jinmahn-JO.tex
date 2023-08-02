@@ -2,7 +2,7 @@
 % Preambles
 % ----------------------------------------
 % ------- Set Document Class -------
-\documentclass[11pt, draftcls]{ucdavisthesis}
+\documentclass[11pt, final]{ucdavisthesis}
 
 
 % ------- Load Files Regarding Preambles -------
@@ -62,20 +62,32 @@
 % ------- Dedication -------
 \dedication{
     \textsl{
-        (To be added \ldots)
+        I dedicate my dissertation to my lovely wife Yeana. \\
+        \vspace{0.5cm}
+        Thank you for all of your unconditional support along the way. 
     }
 }
 
 
 % ------- Abstract -------
 \abstract{
-(To be added \ldots)
+This dissertation consists of two essays on how residential consumers respond to a range of different electricity price structures and one on the supply side of the energy sector. 
+
+The first essay examines what information households respond to in their monthly energy bills and the implications of their behavioral responses to electricity pricing. Previous work has uncovered evidence that households largely respond to the average price they pay for energy in the previous billing period. In this essay, I re-examine whether households indeed pay attention solely to the average price. Using detailed hourly consumption data from over 100,000 households in Sacramento, California, I measure the impact of surpassing the first threshold of nonlinear tariff structures in a billing month on households' average daily electricity consumption in subsequent months. My empirical results illustrate that households that consumed enough to be subjected to a higher marginal price in the previous billing period reduced their electricity consumption in the succeeding billing month. This finding illustrates one of the many inefficiencies that arise from tiered rate structures: households' response to prices that are not reflecting current supply conditions but rather the household's past consumption levels.
+
+The second essay studies how households respond to Time-Of-Use (TOU) electricity prices that vary throughout the course of the day. The primary purpose of the time-varying pricing scheme is to reshape households' electricity consumption in and near peak-demand hours---more specifically, to reduce their consumption during peak hours and shift some of their consumption to off-peak hours. The existing literature presents evidence that under TOU tariff structures, residential consumers reduced their electricity consumption during peak price periods, but these reductions were insensitive to the marginal changes in peak-hour prices. In this essay, I re-examine the impact of TOU rates but with a different strategy. Rather than estimating how aggregate consumption responds to TOU rates, I decompose household electricity consumption into two distinct categories: consumption for non-temperature-control and temperature-control uses. My empirical analysis shows that households indeed responded to the magnitude of the price increase in the peak rate period; however, the response was not the same for the two consumption categories. In particular, while non-temperature-control-driven consumption during the peak hours markedly fell as the peak price increased, temperature-control-driven consumption fell prior to the peak hours, and actually increased during the peak hours, relative to the reduction in pre-peak hours, as the peak price increased. Ultimately, the differences in the responses across these two channels masked households' high price sensitivity. This also illustrates that the two types of electricity consumption evolved differently, and nonlinearly, according to daily heating degree days and the point electricity was consumed in time. These findings suggest that adopting autonomous heating control systems or augmenting additional across-day flexibility to the typical structure of TOU electricity pricing is required to maximize the benefits of the pricing scheme.
+
+The third essay develops a discrete choice dynamic programming (DCDP) framework in continuous time by formulating fracking firms' drilling decisions as an optimal stopping problem. In a recent paper, Hotelling's classic model of nonrenewable resource extraction is recast as a drilling problem to explain observations in Texas that drilling activity responds to oil prices sensitively, while oil production from existing wells does not respond. The model in this prior paper, however, cannot rationalize the empirical phenomenon that firms in North Dakota drilled wells in both low- and high-quality locations. The DCDP model uses cost shocks to rationalize the simultaneous drilling of resources with heterogeneous quality. Further, the model can be estimated empirically using microeconomic data and also solved analytically for an aggregate solution. In the limit, the model converges to the classic Hotelling model.
 }
 
 
 % ------- Acknowledgments -------
 \acknowledgments{
-(To be added \ldots)
+I am deeply grateful for the teaching, guidance, and encouragement I received from my committee members: Kevin Nova, Katrina Jessoe, and Mark Agerton. \\
+
+My graduate school colleagues have contributed to my academic and daily lives at UC Davis. Thanks especially to Seunghyun Lee, Yujing (Megan) Song, Emily McGlynn, and Sangwon Lee. \\
+
+Funding from the Jastro \& Shields Research Fellowship is gratefully acknowledged. 
 }
 
 
@@ -148,6 +160,35 @@
 
 
 % ------- Chapter 3 -------
+\chapter{From Hotelling to DCDP Model: New Approach for Microeconomic Empirical Work in Oil and Gas Extraction}
+\label{Chpater:Chapter-2}
+\textbf{{\large
+    (Coauthored with Mark J. Agerton\footnote{Department of Agricultural and Resource Economics, University of California, Davis.})
+}} \vspace{0.7cm}
+
+\section{Introduction}
+\label{C3-Section:Introduction}
+\input{04_Chapter-3/01_Introduction/Introduction.tex}
+
+
+\section{Data and Empirical Analysis}
+\label{C3-Section:Data-and-Empirical-Analysis}
+\input{04_Chapter-3/02_Data-and-Empirical-Analysis/Data-and-Empirical-Analysis.tex}
+
+
+\section{A DCDP Model in Continuous Time for Drilling Decisions in Oil and Gas Extraction}
+\label{C3-Section:A-DCDP-Model-in-Continuous-Time}
+\input{04_Chapter-3/03_A-DCDP-Model-in-Continuous-Time/A-DCDP-Model-in-Continuous-Time.tex}
+
+
+\section{Equilibrium Dynamics with Oil Prices}
+\label{C3-Section:Equilibrium-Dynamics-with-Oil-Prices}
+\input{04_Chapter-3/04_Equilibrium-Dynamics-with-Oil-Prices/Equilibrium-Dynamics-with-Oil-Prices.tex}
+
+
+\section{Conclusion}
+\label{C3-Section:Conclusion}
+\input{04_Chapter-3/07_Conclusion/Conclusion.tex}
 
 
 % ------- Appendix -------

@@ -1,0 +1,88 @@
+% ----------------------------------------
+% Preambles
+% ----------------------------------------
+% ------- Load preambles -------
+% % 1. To set document layout
+\input{00_Preambles/Preamble_Dissertation_Layout}
+% % 2. To load packages required
+\input{00_Preambles/Preamble_Dissertation_Packages}
+% % 3. To define new commands
+\input{00_Preambles/Preamble_Dissertation_New-Commands}
+
+
+% ------- To add basic document information -------
+% % 2. TITLE, AUTHOR, AND DATE
+% % 2.1. Title
+%\title{}
+
+% % 2.2. Author
+\author{Jinmahn Jo}
+
+% % 2.3. Date
+%\date{October 23, 2020}
+
+
+% ----------------------------------------
+% Main Document 
+% ----------------------------------------
+\begin{document}
+
+% ------- Front-Matter -------
+%\frontmatter
+%\tableofcontents
+%\clearpage
+%
+%\listoftables
+%\clearpage
+%
+%\listoffigures
+%\clearpage
+
+
+% ------- Main Matter -------
+\section{Introduction}
+\label{C2-Section:Introduction}
+\input{03_Chapter-2/01_Introduction/Introduction.tex}
+
+
+\section{Data}
+\label{C2-Section:Data}
+\input{03_Chapter-2/99_USAEE-2023/02_Data/Data.tex}
+
+
+\section{Empirical Analysis and Results}
+\label{C2-Section:Empirical-Analysis-and-Results}
+\input{03_Chapter-2/99_USAEE-2023/03_Empirical-Analysis-and-Results/Empirical-Analysis-and-Results.tex}
+
+
+\section{An Alternative Electricity Pricing}
+\label{C2-Section:An-Alternative-Electricity-Pricing}
+\input{03_Chapter-2/99_USAEE-2023/04_An-Alternative-Electricity-Pricing/An-Alternative-Electricity-Pricing.tex}
+
+
+\section{Conclusion}
+\label{C2-Section:Conclusion}
+\input{03_Chapter-2/05_Conclusion/Conclusion.tex}
+\clearpage
+
+
+% % Appendix
+
+%\appendix
+%\section{Appendixes}
+%\chapter{Appendix}
+%\label{Appendixes}
+%\input{06_Appendixes/Appendixes}
+%\clearpage
+
+
+% ------- Back Matter -------
+%\backmatter
+
+% % To add a bibliography
+\small
+\bibliographystyle{05_Bibliography/aea}
+\bibliography{05_Bibliography/Bibliography}
+
+\end{document}
+

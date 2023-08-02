@@ -1,11 +1,9 @@
 \begin{equation}
+%\small
 \begin{split}
-	& E\Big[ \underset{a \in \mathcal{A}}{\max} \left\{ V_{i,\ell(i, a, k)} \ + \ \psi_{iak} \ + \ \tilde{\psi}_{iak} \ + \ \epsilon_{iak} \right\} \Big] \\
-	& = \ 
-	\begin{cases}
-		V_{ik} \ + \ \sigma \big( \gamma \ - \ \ln(1 - Pr_{k}) \big) \hspace{1.6cm} \text{if \ \ $a = 0$} \\
-		\psi_{i1k} \ + \ \tilde{\psi}_{i1k} \ + \ \sigma \big( \gamma \ - \ \ln(Pr_{k}) \big) \hspace{0.7cm} \text{if \ \ $a = 1$}.
-	\end{cases}
+	\lambda_{a} E\Big[ \underset{a \in \mathcal{A}}{\max} \left\{ V_{ik} + \psi_{iak} + \epsilon_{iak} \right\} \Big] 
+	& =  
+	\underbrace{\lambda_{a} \left\{ V_{ik} + \sigma \big( \gamma - \ln(1 - Pr_{k}) \big) \right\} }_{\text{if \ $a = 0$}} = \underbrace{\lambda_{a} \left\{ \psi_{i1k} + \sigma \big( \gamma - \ln(Pr_{k}) \big) \right\} }_{\text{if \ $a = 1$}},
 \end{split}
 \label{Equation:Firms-Problem_Emax}
 \end{equation}

@@ -2,21 +2,21 @@ Using a Taylor series expansion, $\dot{R}_{t}$ can be approximated near the stea
 \begin{equation*}
 \begin{split}
     \dot{R}_{t} \ 
-    & \approx \ (-R_{ss} Pr_{ss} \ + \ E) \\
-    & \hspace{1.0cm} + \ \frac{\partial}{\partial R_{t}} (-R_{t} Pr_{t} \ + \ E) (R_{t} \ - \ R_{ss}) \ + \ \frac{\partial}{\partial \pi_{t}} (-R_{t} Pr_{t} \ + \ E) (\pi_{t} \ - \ \pi_{ss}) \\
-    & = \ 0 \ + \ \left( -Pr_{t} \ - \ \frac{\partial Pr_{t}}{\partial R_{t}} R_{t} \right) (R_{t} \ - \ R_{ss}) \ + \ \left( -\frac{\partial Pr_{t}}{\partial \pi_{t}} R_{t} \right) (\pi_{t} \ - \ \pi_{ss}) \\
-    & = \ \left( -Pr_{t} \ - \ \frac{\partial Pr_{t}}{\partial R_{t}} R_{t} \right) (R_{t} \ - \ R_{ss}) \ + \ \left( -\frac{\partial Pr_{t}}{\partial \pi_{t}} R_{t} \right) (\pi_{t} \ - \ \pi_{ss}).
+    & \approx \ (-\lambda_{a} R_{ss} Pr_{ss} \ + \ E) \\
+    & \hspace{1.0cm} + \ \frac{\partial}{\partial R_{t}} (-\lambda_{a} R_{t} Pr_{t} \ + \ E) (R_{t} \ - \ R_{ss}) \ + \ \frac{\partial}{\partial \pi_{t}} (-\lambda_{a} R_{t} Pr_{t} \ + \ E) (\pi_{t} \ - \ \pi_{ss}) \\
+    & = \ 0 \ + \ \lambda_{a} \left( -Pr_{t} \ - \ \frac{\partial Pr_{t}}{\partial R_{t}} R_{t} \right) (R_{t} \ - \ R_{ss}) \ + \ \lambda_{a} \left( -\frac{\partial Pr_{t}}{\partial \pi_{t}} R_{t} \right) (\pi_{t} \ - \ \pi_{ss}) \\
+    & = \ \lambda_{a} \left( -Pr_{t} \ - \ \frac{\partial Pr_{t}}{\partial R_{t}} R_{t} \right) (R_{t} \ - \ R_{ss}) \ + \ \lambda_{a} \left( -\frac{\partial Pr_{t}}{\partial \pi_{t}} R_{t} \right) (\pi_{t} \ - \ \pi_{ss}).
 \end{split}
 \end{equation*}
 In the same way, the linear approximation of $\dot{\pi}_{t}$ near the steady state ($R_{ss}$, $\pi_{ss}$) is given by
 \begin{equation*}
 \begin{split}
     \dot{\pi}_{t} \ 
-    & \approx \ \left(r \pi_{ss} \ - \ \sigma \big( \gamma \ - \ \ln(1 - Pr_{ss}) \big) \right) \\
-    & \hspace{1.0cm} + \ \frac{\partial}{\partial R_{t}} \left(r \pi_{t} \ - \ \sigma \big( \gamma \ - \ \ln(1 - Pr_{t}) \big) \right) (R_{t} \ - \ R_{ss}) \\
-    & \hspace{1.0cm} + \ \frac{\partial}{\partial \pi_{t}} \left(r \pi_{t} \ - \ \sigma \big( \gamma \ - \ \ln(1 - Pr_{t}) \big) \right) (\pi_{t} \ - \ \pi_{ss}) \\
-    & = \ 0 \ + \ \left( -\frac{\sigma}{1 - Pr_{t}} \frac{\partial Pr_{t}}{\partial R_{t}} \right) (R_{t} \ - \ R_{ss}) \ + \ \left( r \ - \ \frac{\sigma}{1 - Pr_{t}} \frac{\partial Pr_{t}}{\partial \pi_{t}} \right) (\pi_{t} \ - \ \pi_{ss}) \\
-    & = \ \left( -\frac{\sigma}{1 - Pr_{t}} \frac{\partial Pr_{t}}{\partial R_{t}} \right) (R_{t} \ - \ R_{ss}) \ + \ \left( r \ - \ \frac{\sigma}{1 - Pr_{t}} \frac{\partial Pr_{t}}{\partial \pi_{t}} \right) (\pi_{t} \ - \ \pi_{ss}).
+    & \approx \ \left(r \pi_{ss} \ - \ \lambda_{a} \sigma \big( \gamma \ - \ \ln(1 - Pr_{ss}) \big) \right) \\
+    & \hspace{1.0cm} + \ \frac{\partial}{\partial R_{t}} \left(r \pi_{t} \ - \ \lambda_{a} \sigma \big( \gamma \ - \ \ln(1 - Pr_{t}) \big) \right) (R_{t} \ - \ R_{ss}) \\
+    & \hspace{1.0cm} + \ \frac{\partial}{\partial \pi_{t}} \left(r \pi_{t} \ - \ \lambda_{a} \sigma \big( \gamma \ - \ \ln(1 - Pr_{t}) \big) \right) (\pi_{t} \ - \ \pi_{ss}) \\
+    & = \ 0 \ + \ \left( -\frac{\lambda_{a} \sigma}{1 - Pr_{t}} \frac{\partial Pr_{t}}{\partial R_{t}} \right) (R_{t} \ - \ R_{ss}) \ + \ \left( r \ - \ \frac{\lambda_{a} \sigma}{1 - Pr_{t}} \frac{\partial Pr_{t}}{\partial \pi_{t}} \right) (\pi_{t} \ - \ \pi_{ss}) \\
+    & = \ \lambda_{a} \left( -\frac{\sigma}{1 - Pr_{t}} \frac{\partial Pr_{t}}{\partial R_{t}} \right) (R_{t} \ - \ R_{ss}) \ + \ \lambda_{a} \left( \frac{r}{\lambda_{a}} \ - \ \frac{\sigma}{1 - Pr_{t}} \frac{\partial Pr_{t}}{\partial \pi_{t}} \right) (\pi_{t} \ - \ \pi_{ss}).
 \end{split}
 \end{equation*}
 From those two approximations, the linearized system near the steady state ($R_{ss}$, $\pi_{ss}$) is
@@ -27,15 +27,17 @@ From those two approximations, the linearized system near the steady state ($R_{
         \dot{\pi}_{t}
     \end{pmatrix} \ 
     & = \ 
+    \lambda_{a} 
     \begin{pmatrix}
         -Pr_{t} \ - \ \frac{\partial Pr_{t}}{\partial R_{t}} R_{t} & -\frac{\partial Pr_{t}}{\partial \pi_{t}} R_{t} \\
-        -\frac{\sigma}{1 - Pr_{t}} \frac{\partial Pr_{t}}{\partial R_{t}} & r \ - \ \frac{\sigma}{1 - Pr_{t}} \frac{\partial Pr_{t}}{\partial \pi_{t}}
+        -\frac{\sigma}{1 - Pr_{t}} \frac{\partial Pr_{t}}{\partial R_{t}} & \frac{r}{\lambda_{a}} \ - \ \frac{\sigma}{1 - Pr_{t}} \frac{\partial Pr_{t}}{\partial \pi_{t}}
     \end{pmatrix}
     \begin{pmatrix}
         R_{t} \ - \ R_{ss} \\
         \pi_{t} \ - \ \pi_{ss}
     \end{pmatrix} \\
     & = \
+    \lambda_{a} 
     \begin{pmatrix}
         [1] & [2] \\
         [3] & [4]
@@ -52,25 +54,25 @@ Applying the Implicit Function Theorem to necessary condition (\ref{Equation:Soc
 \begin{cases}
     \begin{split}
         \frac{\partial Pr_{t}}{\partial R_{t}} \ 
-        & = \ - \frac{ \big( \alpha^{2} u''(\alpha R_{t} Pr_{t}) - c''(R_{t} Pr_{t}) \big) Pr_{t}}{ \ \big( \alpha^{2} u''(\alpha R_{t} Pr_{t}) - c''(R_{t} Pr_{t}) \big) R_{t} \ - \ \frac{\sigma}{Pr_{t}(1 - Pr_{t})} \ } \\
+        & = \ - \frac{ \big( \alpha^{2} u''(\lambda_{a} \alpha R_{t} Pr_{t}) - c''(\lambda_{a} R_{t} Pr_{t}) \big) \lambda_{a} Pr_{t}}{ \ \big( \alpha^{2} u''(\alpha \lambda_{a} R_{t} Pr_{t}) - c''(\lambda_{a} R_{t} Pr_{t}) \big) \lambda_{a} R_{t} \ - \ \frac{\sigma}{Pr_{t}(1 - Pr_{t})} \ } \\
         \frac{\partial Pr_{t}}{\partial \pi_{t}} \
-        & = \ \frac{1}{ \ \big( \alpha^{2} u''(\alpha R_{t} Pr_{t}) - c''(R_{t} Pr_{t}) \big) R_{t} \ - \ \frac{\sigma}{Pr_{t}(1 - Pr_{t})} \ } 
+        & = \ \frac{1}{ \ \big( \alpha^{2} u''(\alpha \lambda_{a} R_{t} Pr_{t}) - c''(\lambda_{a} R_{t} Pr_{t}) \big) \lambda_{a} R_{t} \ - \ \frac{\sigma}{Pr_{t}(1 - Pr_{t})} \ } 
     \end{split}
 \end{cases}
 \end{equation*}
-Because $\alpha^{2} u''(\alpha R_{t} Pr_{t}) - c''(R_{t} Pr_{t}) < 0$ in our setting, $\partial Pr_{t} / \partial R_{t} < 0$ and $\partial Pr_{t} / \partial \pi_{t} < 0$.
+Because $\alpha^{2} u''(\alpha \lambda_{a} R_{t} Pr_{t}) - c''(\lambda_{a} R_{t} Pr_{t}) < 0$ in our setting, $\partial Pr_{t} / \partial R_{t} < 0$ and $\partial Pr_{t} / \partial \pi_{t} < 0$.
 
 In the coefficient matrix,
 \begin{equation*}
 \begin{split}
     [1] \ 
-    & : \ \ -Pr_{t} \ - \ \frac{\partial Pr_{t}}{\partial R_{t}} R_{t} \ = \frac{\frac{\sigma}{Pr_{t}(1 - Pr_{t})}}{ \ \big( \alpha^{2} u''(\alpha R_{t} Pr_{t}) - c''(R_{t} Pr_{t}) \big) R_{t} \ - \ \frac{\sigma}{Pr_{t}(1 - Pr_{t})} \ } \ < \ 0; \\
+    & : \ \ -Pr_{t} \ - \ \frac{\partial Pr_{t}}{\partial R_{t}} R_{t} \ = \frac{\frac{\sigma}{Pr_{t}(1 - Pr_{t})}}{ \ \big( \alpha^{2} u''(\alpha \lambda_{a} R_{t} Pr_{t}) - c''(\lambda_{a} R_{t} Pr_{t}) \big) \lambda_{a} R_{t} \ - \ \frac{\sigma}{Pr_{t}(1 - Pr_{t})} \ } \ < \ 0; \\
     [2] \
     & : \ \ -\frac{\partial Pr_{t}}{\partial \pi_{t}} R_{t} \ > \ 0; \\
     [3] \
     & : \ \ -\frac{\sigma}{1 - Pr_{t}} \frac{\partial Pr_{t}}{\partial R_{t}} \ > \ 0; \ \text{and} \\
     [4] \ 
-    & : \ \ r \ - \ \frac{\sigma}{1 - Pr_{t}} \frac{\partial Pr_{t}}{\partial \pi_{t}} \ > \ 0.
+    & : \ \ \frac{r}{\lambda_{a}} \ - \ \frac{\sigma}{1 - Pr_{t}} \frac{\partial Pr_{t}}{\partial \pi_{t}} \ > \ 0.
 \end{split}
 \end{equation*}
 Therefore, the determinant of the coefficient matrix clearly has a negative value (i.e., $[1] \times [4] - [2] \times [3] < 0$). 

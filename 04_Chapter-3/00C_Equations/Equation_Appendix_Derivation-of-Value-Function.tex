@@ -2,8 +2,8 @@ In our framework, the instantaneous Bellman equation can be approximated as foll
 \begin{equation*}
 \begin{split}
     (1 + \tau \rho) V_{ik} (t) \
-    & \approxeq \ \tau (f_{ik} \ + \ \lambda_{a} \tilde{f}_{ik}) \\
-    & \hspace{0.7cm} + \ \tau \lambda_{a} E\Big[ \underset{a \in \mathcal{A}}{\max} \left\{ V_{i,\ell(i, a, k)} (t + \tau) \ + \ \psi_{iak} \ + \ \tilde{\psi}_{iak} \ + \ \epsilon_{iak} \right\} \Big] \\
+    & \approxeq \ \tau f_{ik} \\
+    & \hspace{0.7cm} + \ \tau \lambda_{a} E\Big[ \underset{a \in \mathcal{A}}{\max} \left\{ V_{i,\ell(i, a, k)} (t + \tau) \ + \ \psi_{iak} \ + \ \epsilon_{iak} \right\} \Big] \\
     & \hspace{0.7cm} + \ \sum_{\ell \neq k} \tau \lambda_{k\ell} V_{i\ell}(t + \tau) \\
     & \hspace{0.7cm} + \ \left\{ 1 \ - \ \tau \left( \lambda_{a} \ + \ \sum_{\ell \neq k} \lambda_{k\ell} \right) \right\} V_{ik} (t + \tau),
 \end{split}
@@ -14,12 +14,17 @@ Rearranging terms, dividing by $\tau$, and letting $\tau \rightarrow 0$ yield a 
 \begin{equation*}
 \begin{split}
     & -\big\{ V_{ik} (t + \tau) \ + \ V_{ik} (t) \big\} \ + \ \tau \rho V_{ik} (t) \ + \ \tau \left( \lambda_{a} \ + \ \sum_{\ell \neq k} \lambda_{k\ell} \right) V_{ik}(t + \tau) \\
-    & \hspace{1.0cm} \approxeq \ \tau (f_{ik} \ + \ \lambda_{a} \tilde{f}_{ik}) \ + \ \tau \lambda_{a} E\Big[ \underset{a \in \mathcal{A}}{\max} \left\{ V_{i,\ell(i, a, k)} (t + \tau) \ + \ \psi_{iak} \ + \ \tilde{\psi}_{iak} \ + \ \epsilon_{iak} \right\} \Big] \\
-    & \hspace{1.7cm} + \ \sum_{\ell \neq k} \tau \lambda_{k\ell} V_{i\ell}(t + \tau) \\
+    & \hspace{1.0cm} \approxeq \ \tau f_{ik} \ + \ \tau \lambda_{a} E\Big[ \underset{a \in \mathcal{A}}{\max} \left\{ V_{i,\ell(i, a, k)} (t + \tau) \ + \ \psi_{iak} \ + \ \epsilon_{iak} \right\} \Big] \ + \ \sum_{\ell \neq k} \tau \lambda_{k\ell} V_{i\ell}(t + \tau) \\
     & -\frac{1}{\tau} \big\{ V_{ik} (t + \tau) \ + \ V_{ik} (t) \big\} \ + \ \rho V_{ik}(t) \ + \ \left( \lambda_{a} \ + \ \sum_{\ell \neq k} \lambda_{k\ell} \right) V_{ik}(t + \tau) \\
-    & \hspace{1.0cm} \approxeq \ (f_{ik} \ + \ \lambda_{a} \tilde{f}_{ik}) \ + \ \lambda_{a} E\Big[ \underset{a \in \mathcal{A}}{\max} \left\{ V_{i,\ell(i, a, k)} (t + \tau) \ + \ \psi_{iak} \ + \ \tilde{\psi}_{iak} \ + \ \epsilon_{iak} \right\} \Big] \\
-    & \hspace{1.7cm} + \ \sum_{\ell \neq k} \lambda_{k\ell} V_{i\ell}(t + \tau) \\
+    & \hspace{1.0cm} \approxeq \ f_{ik} \ + \ \lambda_{a} E\Big[ \underset{a \in \mathcal{A}}{\max} \left\{ V_{i,\ell(i, a, k)} (t + \tau) \ + \ \psi_{iak} \ + \ \epsilon_{iak} \right\} \Big] \ + \ \sum_{\ell \neq k} \lambda_{k\ell} V_{i\ell}(t + \tau) \\
     & -\dot{V}_{ik} (t) \ + \ \left( \rho \ + \ \lambda_{a} \ + \ \sum_{\ell \neq k} \lambda_{k\ell} \right) V_{ik}(t) \\
-    & \hspace{1.0cm} = \ (f_{ik} \ + \ \lambda_{a} \tilde{f}_{ik}) \ + \ \lambda_{a} E\Big[ \underset{a \in \mathcal{A}}{\max} \left\{ V_{i,\ell(i, a, k)} (t) \ + \ \psi_{iak} \ + \ \tilde{\psi}_{iak} \ + \ \epsilon_{iak} \right\} \Big] \ + \ \sum_{\ell \neq k} \lambda_{k\ell} V_{i\ell}(t)
+    & \hspace{1.0cm} = \ f_{ik} \ + \ \lambda_{a} E\Big[ \underset{a \in \mathcal{A}}{\max} \left\{ V_{i,\ell(i, a, k)} (t) \ + \ \psi_{iak} \ + \ \epsilon_{iak} \right\} \Big] \ + \ \sum_{\ell \neq k} \lambda_{k\ell} V_{i\ell}(t).
+\end{split}
+\end{equation*}
+The assumption that the firm $i$'s drilling decisions have no impact on the price of oil in the market (i.e., $\ell(i, a, k) = k$ for any $a \in \mathcal{A}$) yields an even simpler expression:
+\begin{equation*}
+\begin{split}
+    & -\dot{V}_{ik} (t) \ + \ \left( \rho \ + \ \lambda_{a} \ + \ \sum_{\ell \neq k} \lambda_{k\ell} \right) V_{ik}(t) \\
+    & \hspace{1.0cm} = \ f_{ik} \ + \ \lambda_{a} E\Big[ \underset{a \in \mathcal{A}}{\max} \left\{ V_{ik} (t) \ + \ \psi_{iak} \ + \ \epsilon_{iak} \right\} \Big] \ + \ \sum_{\ell \neq k} \lambda_{k\ell} V_{i\ell}(t).
 \end{split}
 \end{equation*}
